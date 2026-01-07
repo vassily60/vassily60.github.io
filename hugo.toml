@@ -1,0 +1,10 @@
+baseURL = "https://vassily60.github.io/"
+languageCode = "en-us"
+title = "Vassily Lombard"
+theme = "PaperMod"
+
+[params]
+  author = "Vassily Lombard"
+  ShowReadingTime = true
+  ShowCodeCopyButtons = true
+  math = true
