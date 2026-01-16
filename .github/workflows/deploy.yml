@@ -1,4 +1,4 @@
-name: Deploy Hugo site
+name: Deploy Hugo site to /docs
 
 on:
   push:
@@ -16,13 +16,21 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v4
         with:
-          hugo-version: '0.116.0' # use the latest Hugo version
+          hugo-version: '0.116.0'
 
       - name: Build site
         run: hugo --minify
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v5
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+      - name: Copy public to docs
+        run: |
+          rm -rf docs/*
+          cp -r public/* docs/
+
+      - name: Commit and push to main
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs
+          git commit -m "Deploy Hugo site to /docs [skip ci]" || echo "No changes to commit"
+          git push
+
