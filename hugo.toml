@@ -1,6 +1,6 @@
 baseURL = "https://vassily60.github.io/"
 languageCode = "en-us"
-title = "Vassily Lombard"
+title = "Vassily Lombard Blog"
 theme = "PaperMod"
 
 [params]
