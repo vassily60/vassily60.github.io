@@ -1,0 +1,99 @@
+{{ if .IsHome }}
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "{{- ( site.Params.schema.publisherType | default "Organization") | title -}}",
+    "name": {{ site.Title | jsonify }},
+    "url": {{ site.Home.Permalink | jsonify }},
+    "description": {{ site.Params.description | plainify | truncate 180 | jsonify }},
+    {{- if (eq site.Params.schema.publisherType "Person") }}
+    "image": {{ site.Params.assets.favicon | default "favicon.ico" | absURL | jsonify }},
+    {{- else }}
+    "logo": {{ site.Params.assets.favicon | default "favicon.ico" | absURL | jsonify }},
+    {{- end }}
+    "sameAs": [
+      {{- if site.Params.schema.sameAs }}
+        {{- range $i, $e := site.Params.schema.sameAs }}{{ if $i }}, {{ end }}{{ trim $e " " | jsonify }}{{ end }}
+      {{- else }}
+        {{- range $i, $e := site.Params.SocialIcons }}{{ if $i }}, {{ end }}{{ trim $e.url " " | safeURL | jsonify }}{{ end }}
+      {{- end }}
+    ]
+  }
+</script>
+{{- else if (or .IsPage .IsSection) }} {{- /* BreadcrumbList */ -}} {{- $url :=
+replace .Parent.Permalink (printf "%s" site.Home.Permalink) "" -}} {{- $lang_url
+:= strings.TrimPrefix (printf "%s/" .Lang) $url -}} {{- $bc_list := split
+$lang_url "/" -}} {{- $crumbs := slice -}} {{- range $index, $element :=
+$bc_list -}} {{- if and (gt (len $element) 0) (ne $element "") -}} {{- $path :=
+printf "%s/" $element -}} {{- $bc_pg := site.GetPage $path -}} {{- if $bc_pg -}}
+{{- $crumbs = $crumbs | append (dict "name" $bc_pg.Name "item" $bc_pg.Permalink)
+-}} {{- end -}} {{- end -}} {{- end -}} {{- $crumbs = $crumbs | append (dict
+"name" .Name "item" .Permalink) -}}
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+    {{- range $i, $crumb := $crumbs }}
+      {{- if $i }},{{ end }}
+      {
+        "@type": "ListItem",
+        "position": {{ add 1 $i }},
+        "name": {{ $crumb.name | jsonify }},
+        "item": {{ $crumb.item | jsonify }}
+      }
+    {{- end }}
+    ]
+  }
+</script>
+{{- if .IsPage }}
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": {{ .Title | plainify | jsonify }},
+    "name": {{ .Title | plainify | jsonify }},
+    "description": {{ with .Description | plainify }}{{ . | jsonify }}{{ else }}{{ .Summary | plainify | jsonify }}{{ end -}},
+    "keywords": [
+      {{- if .Params.keywords }}
+        {{- range $i, $e := .Params.keywords }}{{ if $i }}, {{ end }}{{ $e | jsonify }}{{ end }}
+      {{- else }}
+        {{- range $i, $e := .Params.tags }}{{ if $i }}, {{ end }}{{ $e | jsonify }}{{ end }}
+      {{- end }}
+    ],
+    "articleBody": {{ .Content | safeJS | htmlUnescape | plainify | jsonify }},
+    "wordCount" : {{ .WordCount | jsonify }},
+    "inLanguage": {{ .Language.Lang | default "en-us" | jsonify }},
+    "datePublished": {{ .PublishDate | jsonify }},
+    "dateModified": {{ .Lastmod | jsonify }},
+    {{- with (.Params.author | default site.Params.author) }}
+    "author":
+      {{- if or (eq (printf "%T" .) "[]string") (eq (printf "%T" .) "[]interface {}") -}}
+      [{{- range $i, $v := . -}}{{ if $i }}, {{ end }}
+        {
+          "@type": "Person",
+          "name": {{ $v | jsonify }}
+        }
+      {{- end }}],
+      {{- else -}}
+      {
+        "@type": "Person",
+        "name": {{ . | jsonify }}
+      },
+      {{- end -}}
+    {{- end }}
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": {{ .Permalink | safeHTML | jsonify }}
+    },
+    "publisher": {
+      "@type": "{{- ( site.Params.schema.publisherType | default "Organization") | title -}}",
+      "name": {{ site.Title | jsonify }},
+      "logo": {
+        "@type": "ImageObject",
+        "url": {{ site.Params.assets.favicon | default "favicon.ico" | absURL | jsonify }}
+      }
+    }
+  }
+</script>
+{{- end }} {{- end -}}
