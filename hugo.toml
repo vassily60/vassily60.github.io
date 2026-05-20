@@ -1,10 +1,54 @@
 baseURL = "https://vassily60.github.io/"
 languageCode = "en-us"
-title = "Vassily Lombard Blog"
+title = "Vassily Lombard — Science & Curiosity"
 theme = "PaperMod"
+paginate = 8
 
 [params]
   author = "Vassily Lombard"
+  description = "A blog about science, curiosity, and the ideas that matter."
+  defaultTheme = "auto"
   ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
   ShowCodeCopyButtons = true
-  math = true
+  ShowToc = true
+  TocOpen = false
+  disableScrollToTop = false
+  comments = false
+
+  [params.homeInfoParams]
+    Title = "Hello, I'm Vassily 👋"
+    Content = "I write about science, physics, biology, and the ideas that keep me up at night. Welcome to my corner of the internet."
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/vassily60"
+
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts/"
+    weight = 10
+
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 20
+
+  [[menu.main]]
+    identifier = "search"
+    name = "Search"
+    url = "/search/"
+    weight = 30
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[markup]
+  [markup.highlight]
+    style = "monokai"
+    lineNos = false
