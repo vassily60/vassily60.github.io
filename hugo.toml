@@ -1,7 +1,9 @@
-baseURL = "https://vassily60.github.io/"
+baseURL = "/"
 languageCode = "en-us"
 title = "Vassily Lombard — Science & Curiosity"
 theme = "PaperMod"
+relativeURLs = true
+canonifyURLs = false
 
 [pagination]
   pagerSize = 8

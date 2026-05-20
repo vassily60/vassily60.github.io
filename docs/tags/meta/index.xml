@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Meta on Vassily Lombard — Science &amp; Curiosity</title><link>https://vassily60.github.io/tags/meta/</link><description>Recent content in Meta on Vassily Lombard — Science &amp; Curiosity</description><generator>Hugo -- 0.154.2</generator><language>en-us</language><lastBuildDate>Wed, 20 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://vassily60.github.io/tags/meta/index.xml" rel="self" type="application/rss+xml"/><item><title>Welcome to My Science Blog</title><link>https://vassily60.github.io/posts/welcome/</link><pubDate>Wed, 20 May 2026 00:00:00 +0000</pubDate><guid>https://vassily60.github.io/posts/welcome/</guid><description>Why I started writing about science and what to expect.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Meta on Vassily Lombard — Science &amp; Curiosity</title>
+    <link>/tags/meta/</link>
+    <description>Recent content in Meta on Vassily Lombard — Science &amp; Curiosity</description>
+    <generator>Hugo -- 0.154.2</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 20 May 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/meta/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Welcome to My Science Blog</title>
+      <link>/posts/welcome/</link>
+      <pubDate>Wed, 20 May 2026 00:00:00 +0000</pubDate>
+      <guid>/posts/welcome/</guid>
+      <description>Why I started writing about science and what to expect.</description>
+    </item>
+  </channel>
+</rss>
