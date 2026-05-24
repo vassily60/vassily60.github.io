@@ -157,7 +157,11 @@
     <div class="post-meta"><span>3 min</span>&nbsp;·&nbsp;<span>Vassily Lombard</span>
 
 </div>
-  </header> <div class="toc">
+  </header> 
+<figure class="entry-cover">
+        <img loading="eager" src="http://localhost:1313/images/drone-satellite.png" alt="Description de l&#39;image">
+        <figcaption>Source : NASA / mon labo</figcaption>
+</figure><div class="toc">
     <details >
         <summary accesskey="c" title="(Alt + C)">
             <span class="details">Table of Contents</span>
@@ -194,13 +198,19 @@ Implemented and compared two feature detectors: SIFT, known for its accuracy and
 Used the UAV-VisLoc dataset, a large-scale benchmark containing 6,742 drone images paired with satellite maps across 11 locations in China — focusing on a single location covering roughly 64 km² in the Taizhou region
 Divided the satellite map into overlapping tiles and matched each drone image against every tile independently, selecting the best match by inlier count
 Ran five independent degradation experiments — motion blur, Gaussian noise, and resolution reduction on drone images, and resolution reduction and coverage reduction on the satellite map — to identify failure thresholds for each algorithm</p>
+<p><img alt="Pipeline diagram" loading="lazy" src="/images/drone-pipeline.png"></p>
 <h3 id="results">Results<a hidden class="anchor" aria-hidden="true" href="#results">#</a></h3>
 <p>The results were honest and a little humbling. SIFT was the only algorithm that worked at all — ORB failed entirely across every single condition, including the clean baseline, because the scale difference between drone and satellite imagery simply exceeded what its scale pyramid could handle. That was not what I expected going in.
 SIFT held up surprisingly well under Gaussian noise, maintaining a 100% success rate at both noise levels tested. Motion blur was the most damaging degradation, with success rate dropping to 40% at a blur kernel of 5 pixels and collapsing to 20% at kernel 15. Resolution reduction told a similar story — robust at moderate levels, then a sharp cliff at higher factors.
 The localization errors were large in absolute terms (around 4000–5000 meters on an 8.86 km map), which means the pipeline is finding something but not with useful precision. In this context, success rate turned out to be a far more informative metric than raw localization error.</p>
+<p><img alt="Drone image (right) matched with corresponding satellite tile (left)." loading="lazy" src="/images/drone-matching.png"></p>
 <h3 id="what-i-take-away">What I Take Away<a hidden class="anchor" aria-hidden="true" href="#what-i-take-away">#</a></h3>
 <p>This project taught me that negative results are results too. I went in expecting a clean speed–accuracy tradeoff between SIFT and ORB, and instead found that ORB was simply not geometrically capable of handling this task — a much more interesting finding in its own way. If I were to do this again, I would test on a much larger image sample (the full 768 images rather than just 5), explore preprocessing steps like contrast enhancement to help with cross-view matching, and investigate whether tuning ORB&rsquo;s scale pyramid parameters could make it viable. The pipeline works, but there is a lot of room to make it work better — and now I know exactly where to look.</p>
 <h3 id="resources">Resources<a hidden class="anchor" aria-hidden="true" href="#resources">#</a></h3>
+<p>🐙 <a href="https://github.com/vassily60">Source code</a>
+📄 <a href="/papers/drone-satellite-project.pdf">Read the paper</a>
+🛰️ <a href="https://github.com/IntelliSensing/UAV-VisLoc">Dataset</a>
+📊 <a href="/papers/drone-satellite-slides.pdf">Slides</a></p>
 
 
   </div>
