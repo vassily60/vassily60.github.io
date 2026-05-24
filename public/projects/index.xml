@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Projects on Vassily Lombard</title>
+    <link>http://localhost:1313/projects/</link>
+    <description>Recent content in Projects on Vassily Lombard</description>
+    <generator>Hugo -- 0.154.2</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GPS-Free Drone Navigation Using Computer Vision</title>
+      <link>http://localhost:1313/projects/drone_imaging/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/drone_imaging/</guid>
+      <description>What if a drone could figure out where it is using nothing but its camera?</description>
+    </item>
+    <item>
+      <title>Work &amp; Ideas</title>
+      <link>http://localhost:1313/projects/work-ideas/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/work-ideas/</guid>
+      <description>A closer look at the concepts, prototypes, and future projects I’m thinking about.</description>
+    </item>
+  </channel>
+</rss>

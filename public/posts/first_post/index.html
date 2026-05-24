@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Why Analog Communication is Still Relevant in a Digital World | Vassily Lombard</title>
+<meta name="keywords" content="communication, digital, analog, technology">
+<meta name="description" content="Why is analog communication still relevent where almost everything is digital? Let&#39;s explore how analog communication works why it might come back in the future.">
+<meta name="author" content="Vassily Lombard">
+<link rel="canonical" href="http://localhost:1313/posts/first_post/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.e5e6c6d25ca6cb1f73c3a05994b765c88960c73ff97187c51e7614a3237ddeb2.css" integrity="sha256-5ebG0lymyx9zw6BZlLdlyIlgxz/5cYfFHnYUoyN93rI=" rel="stylesheet">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/first_post/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [["\\(", "\\)"]],
+      displayMath: [["$$", "$$"]],
+      processEscapes: true,
+    },
+    svg: { fontCache: "global" },
+  };
+</script>
+<script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"
+  defer
+></script>
+
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Vassily Lombard (Alt + H)">Vassily Lombard</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/posts/" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/projects/" title="Projects">
+                    <span>Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/readings/" title="Readings">
+                    <span>Readings</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Why Analog Communication is Still Relevant in a Digital World
+    </h1>
+    <div class="post-description">
+      Why is analog communication still relevent where almost everything is digital? Let&#39;s explore how analog communication works why it might come back in the future.
+    </div>
+    <div class="post-meta"><span title='2026-05-21 00:00:00 +0000 UTC'>May 21, 2026</span>&nbsp;·&nbsp;<span>3 min</span>&nbsp;·&nbsp;<span>Vassily Lombard</span>
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#introduction" aria-label="Introduction">Introduction</a></li>
+                <li>
+                    <a href="#analog-communication-theory" aria-label="Analog Communication Theory">Analog Communication Theory</a><ul>
+                        
+                <li>
+                    <a href="#am" aria-label="AM">AM</a></li>
+                <li>
+                    <a href="#fm" aria-label="FM">FM</a></li>
+                <li>
+                    <a href="#pm" aria-label="PM">PM</a>
+                </li>
+            </ul>
+            </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h1 id="introduction">Introduction<a hidden class="anchor" aria-hidden="true" href="#introduction">#</a></h1>
+<p>Analog communication systems were the first and dominant form of communication used in modern history. From transmitting your voice through a telephone line to listening to radio and watching television, analog communication is hidden everywhere !</p>
+<p>But why analog communication and what does &ldquo;analog&rdquo; mean in this context ? You might be disappointed by how short the answer is, but put simply, analog means continuous. In other words and analog signal is a function that can take up any values. One way I like thinking about how analog communication appeared (as opposed to digital communication) is that most natural phenomenon are in fact continuous and hence an intuitive way to capture their entirety is using a continuous system. Of course technology was also the main limiting factor, when Alexander Graham Bell (Bell&rsquo;s Labs !) invented the telephone in 1876, none of the technology to make a continuous signal digital existed, so this was not even an issue !</p>
+<p>Going back to analog signals and communication, let&rsquo;s take temperature as an example, although one might round its value to an intger, it is a continuous value. Height, time or even voltage are other examples. And surprinsgly enough, when you want to capture your voice to send it to your neighbor (with a telephone !), a natural way to proceed is by representing it as a continuous signal. Think about it for a second, as you speak the air pressure changes smoothly taking up any value over time - it is the exact definition of a continuous function, or analog signal - perfect to transmit to our neighbhor.</p>
+<p>Generalizing this example, it is easy to convince yourself that analog is the right choice for cases where you want to transmit continuous information ! We will see, this might not be always true but for now let&rsquo;s keep in mind this example and let&rsquo;s dive deeper into the theory behind analog communication.</p>
+<h1 id="analog-communication-theory">Analog Communication Theory<a hidden class="anchor" aria-hidden="true" href="#analog-communication-theory">#</a></h1>
+<p>There are three main types of modulation in analog communication Amplitude Modulation (AM), Frequency Modulation (FM) and Phase Modulation (PM). You might be wondering now what modulation mean, and it is a fair question to ask, in simple terms it means applying your original signal to a another high frequency signal called a carrier wave. It might seem abastract, but it will make more sense in the following paragarphs. For now though, I will say that increasing the frequency of the original signal is necessary for two reasons. To make it travel further (low frequency signals loose energy quickly !) and use smaller antennas to receive the signal (an antenna of length 1/4 of the wavelength transmitted is required !).</p>
+<h2 id="am">AM<a hidden class="anchor" aria-hidden="true" href="#am">#</a></h2>
+<p>AM was developed in the first quarter of the 20th century and was mostly used for radio broadcasting. It is straightforward and consist of three main parts</p>
+<p>$$
+s(t) = A_c \bigl[1 + \mu m(t)\bigr] \cos\left(2\pi f_c t\right)
+$$</p>
+<h2 id="fm">FM<a hidden class="anchor" aria-hidden="true" href="#fm">#</a></h2>
+<h2 id="pm">PM<a hidden class="anchor" aria-hidden="true" href="#pm">#</a></h2>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/communication/">Communication</a></li>
+      <li><a href="http://localhost:1313/tags/digital/">Digital</a></li>
+      <li><a href="http://localhost:1313/tags/analog/">Analog</a></li>
+      <li><a href="http://localhost:1313/tags/technology/">Technology</a></li>
+    </ul>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">Vassily Lombard</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

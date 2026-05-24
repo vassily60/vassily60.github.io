@@ -1,0 +1,12 @@
+{{- with site.Params.homeInfoParams }}
+<article class="first-entry home-info home-hero">
+  <div class="home-hero-inner">
+    <div class="home-hero-copy">
+      <header class="entry-header">
+        <h1>{{ .Title | markdownify }}</h1>
+      </header>
+      <div class="entry-content">{{ .Content | markdownify }}</div>
+    </div>
+  </div>
+</article>
+{{- end -}}
