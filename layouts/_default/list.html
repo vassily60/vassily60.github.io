@@ -1,4 +1,4 @@
-﻿{{- define "main" }} {{- if and site.Params.profileMode.enabled .IsHome }} {{-
+{{- define "main" }} {{- if and site.Params.profileMode.enabled .IsHome }} {{-
 partial "index_profile.html" . }} {{- else }} {{- if and (not .IsHome) .Title }}
 <header class="page-header">
   {{- partial "breadcrumbs.html" . }}
@@ -23,7 +23,6 @@ partial "index_profile.html" . }} {{- else }} {{- if and (not .IsHome) .Title }}
     </a>
     {{- end }} {{- end }}
   </h1>
-
   {{- if .Description }}
   <div class="post-description">{{ .Description | markdownify }}</div>
   {{- end }}
@@ -102,8 +101,8 @@ tag-entry" }} {{- end }}
     <a class="project-card" href="{{ .RelPermalink }}">
       <div class="project-card-title">{{ .Title }}</div>
       <div class="project-card-desc">
-        {{- with .Params.description -}} {{ . | plainify | htmlUnescape }} {{-
-        else -}} {{ .Summary | plainify | htmlUnescape }} {{- end }}
+        {{- with .Params.description -}}{{ . | plainify | htmlUnescape }}{{-
+        else -}}{{ .Summary | plainify | htmlUnescape }}{{- end }}
       </div>
     </a>
     {{- end }} {{- end }}
@@ -119,7 +118,7 @@ tag-entry" }} {{- end }}
     <a class="project-card" href="/readings/order-of-time/">
       <div class="project-card-title">The Order of Time</div>
       <div class="project-card-desc">
-        Carlo Rovelli’s elegant blend of physics and philosophy.
+        Carlo Rovelli's elegant blend of physics and philosophy.
       </div>
     </a>
     <a class="project-card" href="/readings/the-selfish-gene/">
@@ -131,7 +130,7 @@ tag-entry" }} {{- end }}
     <a class="project-card" href="/readings/thinking-fast-and-slow/">
       <div class="project-card-title">Thinking, Fast and Slow</div>
       <div class="project-card-desc">
-        Kahneman’s exploration of intuition, reasoning, and how we decide.
+        Kahneman's exploration of intuition, reasoning, and how we decide.
       </div>
     </a>
   </div>
