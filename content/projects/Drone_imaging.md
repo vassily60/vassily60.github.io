@@ -2,7 +2,7 @@
 title: "GPS-Free Drone Navigation Using Computer Vision"
 description: "What if a drone could figure out where it is using nothing but its camera?"
 cover:
-  image: "static/images/drone-satellite.png"
+  image: "/images/drone-satellite.png"
   alt: "Description de l'image"
   caption: "Source : NASA / mon labo"
   relative: true
@@ -37,7 +37,7 @@ Used the UAV-VisLoc dataset, a large-scale benchmark containing 6,742 drone imag
 Divided the satellite map into overlapping tiles and matched each drone image against every tile independently, selecting the best match by inlier count
 Ran five independent degradation experiments — motion blur, Gaussian noise, and resolution reduction on drone images, and resolution reduction and coverage reduction on the satellite map — to identify failure thresholds for each algorithm
 
-![Pipeline diagram](/static/images/drone-pipeline.png)
+![Pipeline diagram](/images/drone-pipeline.png)
 
 ### Results
 
@@ -45,7 +45,7 @@ The results were honest and a little humbling. SIFT was the only algorithm that 
 SIFT held up surprisingly well under Gaussian noise, maintaining a 100% success rate at both noise levels tested. Motion blur was the most damaging degradation, with success rate dropping to 40% at a blur kernel of 5 pixels and collapsing to 20% at kernel 15. Resolution reduction told a similar story — robust at moderate levels, then a sharp cliff at higher factors.
 The localization errors were large in absolute terms (around 4000–5000 meters on an 8.86 km map), which means the pipeline is finding something but not with useful precision. In this context, success rate turned out to be a far more informative metric than raw localization error.
 
-![Drone image (right) matched with corresponding satellite tile (left).](/static/images/drone-matching.png)
+![Drone image (right) matched with corresponding satellite tile (left).](/images/drone-matching.png)
 
 ### What I Take Away
 
