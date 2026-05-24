@@ -23,6 +23,7 @@ partial "index_profile.html" . }} {{- else }} {{- if and (not .IsHome) .Title }}
     </a>
     {{- end }} {{- end }}
   </h1>
+
   {{- if .Description }}
   <div class="post-description">{{ .Description | markdownify }}</div>
   {{- end }}
@@ -102,7 +103,7 @@ tag-entry" }} {{- end }}
       <div class="project-card-title">{{ .Title }}</div>
       <div class="project-card-desc">
         {{- with .Params.description -}} {{ . | plainify | htmlUnescape }} {{-
-        else -}} {{ .Summary | plainify | htmlUnescape }} {{- end -}}
+        else -}} {{ .Summary | plainify | htmlUnescape }} {{- end }}
       </div>
     </a>
     {{- end }} {{- end }}
