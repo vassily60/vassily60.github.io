@@ -25,7 +25,7 @@ canonifyURLs = false
 
   [params.homeInfoParams]
     Title = "Welcome to my blog ! 👋"
-    Content = "I am Vassily, a student at Columbia University, and I share on this blog a little bit about my passions. From coding to building robots and writing reviews about books I read, you will learn a bit more about me in this blog. Enjoy exploring !"
+    Content = "I am Vassily, a student at Columbia University, and I use this blog to share a little bit about my passions. From coding and building robots to reviewing the books I read, you will learn a bit more about me here. Enjoy exploring !"
 
   [[params.socialIcons]]
     name = "github"
