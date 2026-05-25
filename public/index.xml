@@ -30,32 +30,18 @@
       <description>What if a drone could figure out where it is using nothing but its camera?</description>
     </item>
     <item>
-      <title>The Order of Time</title>
+      <title>Nausea - Jean-Paul Sartre</title>
       <link>http://localhost:1313/readings/order-of-time/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/readings/order-of-time/</guid>
-      <description>A reflection on Carlo Rovelli’s powerful physics and philosophy book.</description>
+      <description>Jean-Paul Sartre&amp;#39;s first and most famous novel</description>
     </item>
     <item>
-      <title>The Selfish Gene</title>
-      <link>http://localhost:1313/readings/the-selfish-gene/</link>
+      <title>Sign Language Controlled Robot</title>
+      <link>http://localhost:1313/projects/sign_language/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/readings/the-selfish-gene/</guid>
-      <description>Why Richard Dawkins’ book changed how I think about evolution.</description>
-    </item>
-    <item>
-      <title>Thinking, Fast and Slow</title>
-      <link>http://localhost:1313/readings/thinking-fast-and-slow/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/readings/thinking-fast-and-slow/</guid>
-      <description>Daniel Kahneman’s classic on human reasoning, instinct, and decision making.</description>
-    </item>
-    <item>
-      <title>Work &amp; Ideas</title>
-      <link>http://localhost:1313/projects/work-ideas/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/work-ideas/</guid>
-      <description>A closer look at the concepts, prototypes, and future projects I’m thinking about.</description>
+      <guid>http://localhost:1313/projects/sign_language/</guid>
+      <description>What if a robot could understand sign language and respond to it in real time?</description>
     </item>
   </channel>
 </rss>

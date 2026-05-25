@@ -1,6 +1,6 @@
 ---
 title: "Readings"
-description: "A personal collection of books and essays that shape my perspective."
+description: ""
 ---
 
-This page collects the readings that inspire my writing and thinking.
+Here are some books that I think are worth reading. Ranging from philosophy to adventure and history, they made me reflect and think differently about the world. If you choose to embark on the journey of reading one of these books, I hope they will have the same impact on you. Happy reading !

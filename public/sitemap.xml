@@ -39,12 +39,12 @@
   </url><url>
     <loc>http://localhost:1313/search/</loc>
   </url><url>
+    <loc>http://localhost:1313/projects/sign_language/</loc>
+  </url><url>
     <loc>http://localhost:1313/readings/order-of-time/</loc>
   </url><url>
     <loc>http://localhost:1313/readings/the-selfish-gene/</loc>
   </url><url>
     <loc>http://localhost:1313/readings/thinking-fast-and-slow/</loc>
-  </url><url>
-    <loc>http://localhost:1313/projects/work-ideas/</loc>
   </url>
 </urlset>

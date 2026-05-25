@@ -24,8 +24,8 @@ canonifyURLs = false
   comments = false
 
   [params.homeInfoParams]
-    Title = "Hello, I'm Vassily 👋"
-    Content = "I write about science, physics, biology, and the ideas that keep me up at night. Welcome to my corner of the internet."
+    Title = "Welcome to my blog ! 👋"
+    Content = "I am Vassily, a student at Columbia University, and I share on this blog a little bit about my passions. From coding to building robots and writing reviews about books I read, you will learn a bit more about me in this blog. Enjoy exploring !"
 
   [[params.socialIcons]]
     name = "github"
@@ -69,3 +69,6 @@ canonifyURLs = false
   [markup.highlight]
     style = "monokai"
     lineNos = false
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

@@ -1,8 +1,6 @@
 ---
-title: "The Order of Time"
-description: "A reflection on Carlo Rovelli’s powerful physics and philosophy book."
+title: "Nausea - Jean-Paul Sartre"
+description: "Jean-Paul Sartre's first and most famous novel"
 ---
 
-Carlo Rovelli’s _The Order of Time_ blends physics, history, and human curiosity into a compact meditation on how time works.
-
-It is one of the readings I return to when I want to explore how scientific ideas connect with everyday life.
+Sartre's _Nausea_ is about Antoine Roquentin, a melancholic and socially isolated intellectual who is residing in Bouville for the sole purpose of completing a biography on a historical figure.
