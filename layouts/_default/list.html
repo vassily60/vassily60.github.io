@@ -41,7 +41,7 @@ $paginator := .Paginate $pages }} {{ if and .IsHome site.Params.homeInfoParams
 <section class="home-section home-recent-posts">
   <header class="section-header">
     <h2>Recent posts</h2>
-    <p>What I have enjoyed learning about recently :</p>
+    <p>What I have enjoyed learning about recently</p>
   </header>
 </section>
 {{ end }} {{ $term := .Data.Term }} {{ range $index, $page := $paginator.Pages
@@ -109,7 +109,7 @@ $class = "first-entry" }} {{ else if $term }} {{ $class = "post-entry tag-entry"
 <section id="readings" class="home-section home-readings">
   <header class="section-header">
     <h2>Readings</h2>
-    <p>Great books :</p>
+    <p>Great books</p>
   </header>
   <div class="home-card-grid">
     {{ $readings := where (where site.RegularPages "Type" "readings")

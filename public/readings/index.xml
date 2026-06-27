@@ -8,11 +8,25 @@
     <language>en-us</language>
     <atom:link href="http://localhost:1313/readings/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Nausea - Jean-Paul Sartre</title>
-      <link>http://localhost:1313/readings/order-of-time/</link>
+      <title>Méditations Métaphysiques - René Descartes</title>
+      <link>http://localhost:1313/readings/descartes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/readings/order-of-time/</guid>
+      <guid>http://localhost:1313/readings/descartes/</guid>
+      <description>René Descartes&amp;#39; foundational work in philosophy</description>
+    </item>
+    <item>
+      <title>Nausea - Jean-Paul Sartre</title>
+      <link>http://localhost:1313/readings/nausea/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/readings/nausea/</guid>
       <description>Jean-Paul Sartre&amp;#39;s first and most famous novel</description>
+    </item>
+    <item>
+      <title>SPQR (Histoire de l&#39;ancienne Rome) - Mary Beard</title>
+      <link>http://localhost:1313/readings/spqr/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/readings/spqr/</guid>
+      <description>Everything you need to know about Rome</description>
     </item>
   </channel>
 </rss>

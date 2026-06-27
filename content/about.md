@@ -46,4 +46,4 @@ Important: No AI was used to write this content !
 ## Useful links
 
 ▶️ [Linkedin](https://www.linkedin.com/in/vassilylombard/) 🐙 [Github](https://github.com/vassily60)
-📄 [Resume](/papers/resume.pdf)
+📄 [Resume](/papers/resumeVassilyupdated.pdf)

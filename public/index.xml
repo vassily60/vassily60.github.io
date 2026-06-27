@@ -23,6 +23,13 @@
       <description>A bit about who I am.</description>
     </item>
     <item>
+      <title>Design and Characterization of a Pixel Readout chip to emulate Global Shutter</title>
+      <link>http://localhost:1313/projects/pixel_readout/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/pixel_readout/</guid>
+      <description>How does an matrix of pixels work and convert light to an image ?</description>
+    </item>
+    <item>
       <title>GPS-Free Drone Navigation Using Computer Vision</title>
       <link>http://localhost:1313/projects/drone_imaging/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -30,10 +37,17 @@
       <description>What if a drone could figure out where it is using nothing but its camera?</description>
     </item>
     <item>
-      <title>Nausea - Jean-Paul Sartre</title>
-      <link>http://localhost:1313/readings/order-of-time/</link>
+      <title>Méditations Métaphysiques - René Descartes</title>
+      <link>http://localhost:1313/readings/descartes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/readings/order-of-time/</guid>
+      <guid>http://localhost:1313/readings/descartes/</guid>
+      <description>René Descartes&amp;#39; foundational work in philosophy</description>
+    </item>
+    <item>
+      <title>Nausea - Jean-Paul Sartre</title>
+      <link>http://localhost:1313/readings/nausea/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/readings/nausea/</guid>
       <description>Jean-Paul Sartre&amp;#39;s first and most famous novel</description>
     </item>
     <item>
@@ -42,6 +56,13 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/projects/sign_language/</guid>
       <description>What if a robot could understand sign language and respond to it in real time?</description>
+    </item>
+    <item>
+      <title>SPQR (Histoire de l&#39;ancienne Rome) - Mary Beard</title>
+      <link>http://localhost:1313/readings/spqr/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/readings/spqr/</guid>
+      <description>Everything you need to know about Rome</description>
     </item>
   </channel>
 </rss>

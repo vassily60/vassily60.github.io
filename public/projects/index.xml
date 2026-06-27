@@ -8,6 +8,13 @@
     <language>en-us</language>
     <atom:link href="http://localhost:1313/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Design and Characterization of a Pixel Readout chip to emulate Global Shutter</title>
+      <link>http://localhost:1313/projects/pixel_readout/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/pixel_readout/</guid>
+      <description>How does an matrix of pixels work and convert light to an image ?</description>
+    </item>
+    <item>
       <title>GPS-Free Drone Navigation Using Computer Vision</title>
       <link>http://localhost:1313/projects/drone_imaging/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

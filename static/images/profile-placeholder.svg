@@ -1,0 +1,46 @@
+<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f093fb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f5576c;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="300" height="300" fill="url(#bgGradient)"/>
+  
+  <!-- Decorative circles -->
+  <circle cx="30" cy="30" r="20" fill="url(#accentGradient)" opacity="0.3"/>
+  <circle cx="270" cy="270" r="25" fill="url(#accentGradient)" opacity="0.2"/>
+  <circle cx="270" cy="30" r="15" fill="url(#accentGradient)" opacity="0.25"/>
+  
+  <!-- Head circle (profile avatar) -->
+  <circle cx="150" cy="110" r="60" fill="rgba(255, 255, 255, 0.15)" stroke="rgba(255, 255, 255, 0.3)" stroke-width="2"/>
+  
+  <!-- Face background -->
+  <circle cx="150" cy="110" r="55" fill="#f5f5f5"/>
+  
+  <!-- Eyes -->
+  <circle cx="135" cy="100" r="6" fill="#667eea"/>
+  <circle cx="165" cy="100" r="6" fill="#667eea"/>
+  <circle cx="137" cy="98" r="2.5" fill="white"/>
+  <circle cx="167" cy="98" r="2.5" fill="white"/>
+  
+  <!-- Smile -->
+  <path d="M 135 120 Q 150 130 165 120" stroke="#764ba2" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  
+  <!-- Shoulders/body -->
+  <ellipse cx="150" cy="200" rx="70" ry="50" fill="rgba(255, 255, 255, 0.2)"/>
+  
+  <!-- Accent line -->
+  <line x1="50" y1="250" x2="250" y2="250" stroke="url(#accentGradient)" stroke-width="3" opacity="0.6"/>
+  
+  <!-- Tech elements (small decorative squares) -->
+  <rect x="60" y="260" width="12" height="12" fill="rgba(255, 255, 255, 0.3)" rx="2"/>
+  <rect x="228" y="265" width="10" height="10" fill="rgba(255, 255, 255, 0.25)" rx="2"/>
+  <rect x="85" y="275" width="8" height="8" fill="rgba(255, 255, 255, 0.2)" rx="1"/>
+</svg>
