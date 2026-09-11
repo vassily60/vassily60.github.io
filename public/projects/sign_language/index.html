@@ -154,7 +154,7 @@
     <div class="post-description">
       What if a robot could understand sign language and respond to it in real time?
     </div>
-    <div class="post-meta"><span>1 min</span>&nbsp;·&nbsp;<span>Vassily Lombard</span>
+    <div class="post-meta"><span>3 min</span>&nbsp;·&nbsp;<span>Vassily Lombard</span>
 
 </div>
   </header> 
@@ -169,35 +169,82 @@
 
         <div class="inner"><ul>
                 <li>
-                    <a href="#in-summary" aria-label="In Summary">In Summary</a></li>
+                    <a href="#i-built-a-robot-that-understands-sign-language" aria-label="I Built a Robot That Understands Sign Language">I Built a Robot That Understands Sign Language</a><ul>
+                        
                 <li>
-                    <a href="#context--motivation" aria-label="Context &amp; Motivation">Context &amp; Motivation</a></li>
+                    <a href="#the-idea" aria-label="The Idea">The Idea</a></li>
                 <li>
-                    <a href="#what-i-did" aria-label="What I Did">What I Did</a></li>
+                    <a href="#how-it-works" aria-label="How It Works">How It Works</a></li>
                 <li>
-                    <a href="#results" aria-label="Results">Results</a></li>
+                    <a href="#teaching-the-robot-to-see" aria-label="Teaching the Robot to &ldquo;See&rdquo;">Teaching the Robot to &ldquo;See&rdquo;</a></li>
                 <li>
-                    <a href="#what-i-take-away" aria-label="What I Take Away">What I Take Away</a></li>
+                    <a href="#the-brain-behind-it" aria-label="The Brain Behind It">The Brain Behind It</a></li>
+                <li>
+                    <a href="#does-it-actually-work" aria-label="Does It Actually Work?">Does It Actually Work?</a></li>
+                <li>
+                    <a href="#whats-next" aria-label="What&rsquo;s Next">What&rsquo;s Next</a></li>
+                <li>
+                    <a href="#why-it-matters" aria-label="Why It Matters">Why It Matters</a><ul>
+                        
                 <li>
                     <a href="#resources" aria-label="Resources">Resources</a>
                 </li>
+            </ul>
+            </li>
+            </ul>
+            </li>
             </ul>
         </div>
     </details>
 </div>
 
   <div class="post-content"><p><a href="https://github.com/vassily60/Sign-Language-Controlled-Robot-Capstone-Project">View on GitHub</a> · <a href="/papers/sign-language-project.pdf">Read the paper</a></p>
-<h3 id="in-summary">In Summary<a hidden class="anchor" aria-hidden="true" href="#in-summary">#</a></h3>
-<br>
-<h3 id="context--motivation">Context &amp; Motivation<a hidden class="anchor" aria-hidden="true" href="#context--motivation">#</a></h3>
-<br>
-<br>
-<h3 id="what-i-did">What I Did<a hidden class="anchor" aria-hidden="true" href="#what-i-did">#</a></h3>
-<br>
-<h3 id="results">Results<a hidden class="anchor" aria-hidden="true" href="#results">#</a></h3>
-<br>
-<h3 id="what-i-take-away">What I Take Away<a hidden class="anchor" aria-hidden="true" href="#what-i-take-away">#</a></h3>
-<br>
+<h1 id="i-built-a-robot-that-understands-sign-language">I Built a Robot That Understands Sign Language<a hidden class="anchor" aria-hidden="true" href="#i-built-a-robot-that-understands-sign-language">#</a></h1>
+<h2 id="the-idea">The Idea<a hidden class="anchor" aria-hidden="true" href="#the-idea">#</a></h2>
+<p>I wanted to build a robot that you could control just by showing it hand signs, no remote, no keyboard, just American Sign Language (ASL). The goal was to keep it simple, fast, and cheap enough for anyone to build.</p>
+<h2 id="how-it-works">How It Works<a hidden class="anchor" aria-hidden="true" href="#how-it-works">#</a></h2>
+<p>The system has two main parts:</p>
+<ol>
+<li><strong>A camera</strong> mounted on a small robot (built with a Raspberry Pi)</li>
+<li><strong>A nearby laptop</strong> that does the &ldquo;thinking&rdquo;</li>
+</ol>
+<p>The robot takes a picture of your hand sign and sends it wirelessly to the laptop. The laptop figures out which sign you made and sends the answer back. The robot then moves in that direction.</p>
+<p>I used four signs, each one is both a letter and a direction:</p>
+<ul>
+<li><strong>L</strong> = Left</li>
+<li><strong>R</strong> = Right</li>
+<li><strong>N</strong> = North (forward)</li>
+<li><strong>S</strong> = South (backward)</li>
+</ul>
+<h2 id="teaching-the-robot-to-see">Teaching the Robot to &ldquo;See&rdquo;<a hidden class="anchor" aria-hidden="true" href="#teaching-the-robot-to-see">#</a></h2>
+<p>To recognize signs, I needed a lot of hand pictures to train a model. I used three sets of images:</p>
+<ul>
+<li>A big public dataset from Kaggle (mostly plain backgrounds)</li>
+<li>My own photos, taken with messier, more realistic backgrounds</li>
+<li>A mix of both</li>
+</ul>
+<p>Training on more varied images helped the robot recognize signs in real rooms, not just in perfect lighting.</p>
+<h2 id="the-brain-behind-it">The Brain Behind It<a hidden class="anchor" aria-hidden="true" href="#the-brain-behind-it">#</a></h2>
+<p>Instead of building a neural network from scratch, I used two existing, well-tested models (VGG16 and DenseNet201) and combined them together. Each one is good at spotting different kinds of details in an image. By merging their strengths, the combined model was much better at recognizing signs it hadn&rsquo;t seen in that exact setting before, kind of like getting a second opinion before making a decision.</p>
+<p>The architecture of the combined model looks like this:
+<img alt="Data Flow Architecture" loading="lazy" src="/images/dataflow.png"></p>
+<h2 id="does-it-actually-work">Does It Actually Work?<a hidden class="anchor" aria-hidden="true" href="#does-it-actually-work">#</a></h2>
+<p>Yes, pretty well:</p>
+<ul>
+<li>On test data, the combined model reached up to <strong>97% accuracy</strong>.</li>
+<li>In live, real-world testing (different people, different backgrounds), it got things right about <strong>70% of the time</strong>.</li>
+<li>Each prediction took about <strong>0.24 seconds</strong>, and the whole process (camera to robot movement) took under <strong>3 seconds</strong>, fast enough to feel responsive.</li>
+</ul>
+<p>I also tested it with people of different skin tones. It worked a bit less reliably there, which shows the training data needs to be more diverse going forward.</p>
+<h2 id="whats-next">What&rsquo;s Next<a hidden class="anchor" aria-hidden="true" href="#whats-next">#</a></h2>
+<p>This was a first step. Future versions could:</p>
+<ul>
+<li>Recognize more signs, including moving (dynamic) ones</li>
+<li>Work better across different skin tones and lighting</li>
+<li>Let the robot do more than just move, like picking up objects or navigating on its own</li>
+</ul>
+<h2 id="why-it-matters">Why It Matters<a hidden class="anchor" aria-hidden="true" href="#why-it-matters">#</a></h2>
+<p>Projects like this show that sign-language-controlled devices don&rsquo;t need expensive, complicated hardware to work. With just a Raspberry Pi and a regular laptop, it&rsquo;s possible to build something useful for accessibility and hands-free control, and to do it in a way that&rsquo;s fast enough for real use.</p>
 <h3 id="resources">Resources<a hidden class="anchor" aria-hidden="true" href="#resources">#</a></h3>
 <p>🐙 <a href="https://github.com/vassily60/Sign-Language-Controlled-Robot-Capstone-Project">Source code</a>
 📄 <a href="/papers/sign-language-project.pdf">Read the paper</a>

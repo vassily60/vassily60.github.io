@@ -35,6 +35,8 @@
   </url><url>
     <loc>http://localhost:1313/projects/drone_imaging/</loc>
   </url><url>
+    <loc>http://localhost:1313/readings/descartes/</loc>
+  </url><url>
     <loc>http://localhost:1313/readings/nausea/</loc>
   </url><url>
     <loc>http://localhost:1313/projects/</loc>
