@@ -10,7 +10,7 @@
 <meta name="description" content="Below you can find a selection of personal projects I enjoyed working on. Hope you have fun reading about them and don&rsquo;t hesitate to reach out if you have any questions !">
 <meta name="author" content="Vassily Lombard">
 <link rel="canonical" href="http://localhost:1313/projects/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.58b3120ebc4a2045090a30d0105f20302cc6dd9b05d98c821dcb8ba3f4ecc039.css" integrity="sha256-WLMSDrxKIEUJCjDQEF8gMCzG3ZsF2YyCHcuLo/TswDk=" rel="stylesheet">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.762f418f9af1d134f20465643c8e61276d17a720600a5cf3bfd5aa083d64c17e.css" integrity="sha256-di9Bj5rx0TTyBGVkPI5hJ20XpyBgClzzv9WqCD1kwX4=" rel="stylesheet">
 <link rel="icon" href="http://localhost:1313/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
@@ -85,6 +85,38 @@
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"
   defer
 ></script>
+<script>
+  document.documentElement.classList.add("scroll-reveal-ready");
+
+  window.addEventListener("DOMContentLoaded", () => {
+    const revealItems = document.querySelectorAll(
+      ".home-hero, .home-section, .project-card, .post-entry, .project-entry, .experience-media, .experience-card, .post-single, .page-header",
+    );
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      revealItems.forEach((item) => item.classList.add("is-visible"));
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          entry.target.classList.toggle("is-visible", entry.isIntersecting);
+        });
+      },
+      { threshold: 0.08, rootMargin: "-4% 0px -8%" },
+    );
+
+    revealItems.forEach((item, index) => {
+      item.classList.add("scroll-reveal");
+      item.style.setProperty(
+        "--reveal-delay",
+        `${Math.min(index * 50, 250)}ms`,
+      );
+      observer.observe(item);
+    });
+  });
+</script>
 
 </head>
 <body class="list" id="top">
@@ -298,7 +330,7 @@ Context &amp; Motivation I have always been fascinated by the idea that a machin
     
     <div class="entry-content">
       <p>
-        true View on GitHub · Read the paper
+        View on GitHub · Read the paper
 I Built a Robot That Understands Sign Language The Idea I wanted to build a robot that you could control just by showing it hand signs, no remote, no keyboard, just American Sign Language (ASL). The goal was to keep it simple, fast, and cheap enough for anyone to build.
 How It Works The system has two main parts:
 A camera mounted on a small robot (built with a Raspberry Pi) A nearby laptop that does the “thinking” The robot takes a picture of your hand sign and sends it wirelessly to the laptop. The laptop figures out which sign you made and sends the answer back. The robot then moves in that direction.

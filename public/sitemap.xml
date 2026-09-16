@@ -2,6 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/projects/pixel_readout/</loc>
+  </url><url>
+    <loc>http://localhost:1313/projects/bandgap_voltage_reference/</loc>
+  </url><url>
+    <loc>http://localhost:1313/projects/digital_electronics_piano/</loc>
+  </url><url>
+    <loc>http://localhost:1313/projects/drone_imaging/</loc>
+  </url><url>
+    <loc>http://localhost:1313/projects/sign_language/</loc>
+  </url><url>
     <loc>http://localhost:1313/tags/analog/</loc>
     <lastmod>2026-05-21T00:00:00+00:00</lastmod>
   </url><url>
@@ -31,11 +41,7 @@
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/projects/pixel_readout/</loc>
-  </url><url>
     <loc>http://localhost:1313/experience/</loc>
-  </url><url>
-    <loc>http://localhost:1313/projects/drone_imaging/</loc>
   </url><url>
     <loc>http://localhost:1313/readings/descartes/</loc>
   </url><url>
@@ -46,8 +52,6 @@
     <loc>http://localhost:1313/readings/</loc>
   </url><url>
     <loc>http://localhost:1313/search/</loc>
-  </url><url>
-    <loc>http://localhost:1313/projects/sign_language/</loc>
   </url><url>
     <loc>http://localhost:1313/readings/spqr/</loc>
   </url>

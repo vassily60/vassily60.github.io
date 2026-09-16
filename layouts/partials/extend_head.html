@@ -13,3 +13,35 @@
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"
   defer
 ></script>
+<script>
+  document.documentElement.classList.add("scroll-reveal-ready");
+
+  window.addEventListener("DOMContentLoaded", () => {
+    const revealItems = document.querySelectorAll(
+      ".home-hero, .home-section, .project-card, .post-entry, .project-entry, .experience-media, .experience-card, .post-single, .page-header",
+    );
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      revealItems.forEach((item) => item.classList.add("is-visible"));
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          entry.target.classList.toggle("is-visible", entry.isIntersecting);
+        });
+      },
+      { threshold: 0.08, rootMargin: "-4% 0px -8%" },
+    );
+
+    revealItems.forEach((item, index) => {
+      item.classList.add("scroll-reveal");
+      item.style.setProperty(
+        "--reveal-delay",
+        `${Math.min(index * 50, 250)}ms`,
+      );
+      observer.observe(item);
+    });
+  });
+</script>

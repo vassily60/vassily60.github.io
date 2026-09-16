@@ -113,7 +113,7 @@
 ">
 <meta name="author" content="Vassily Lombard">
 <link rel="canonical" href="http://localhost:1313/experience/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.58b3120ebc4a2045090a30d0105f20302cc6dd9b05d98c821dcb8ba3f4ecc039.css" integrity="sha256-WLMSDrxKIEUJCjDQEF8gMCzG3ZsF2YyCHcuLo/TswDk=" rel="stylesheet">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.762f418f9af1d134f20465643c8e61276d17a720600a5cf3bfd5aa083d64c17e.css" integrity="sha256-di9Bj5rx0TTyBGVkPI5hJ20XpyBgClzzv9WqCD1kwX4=" rel="stylesheet">
 <link rel="icon" href="http://localhost:1313/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
@@ -187,6 +187,38 @@
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"
   defer
 ></script>
+<script>
+  document.documentElement.classList.add("scroll-reveal-ready");
+
+  window.addEventListener("DOMContentLoaded", () => {
+    const revealItems = document.querySelectorAll(
+      ".home-hero, .home-section, .project-card, .post-entry, .project-entry, .experience-media, .experience-card, .post-single, .page-header",
+    );
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      revealItems.forEach((item) => item.classList.add("is-visible"));
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          entry.target.classList.toggle("is-visible", entry.isIntersecting);
+        });
+      },
+      { threshold: 0.08, rootMargin: "-4% 0px -8%" },
+    );
+
+    revealItems.forEach((item, index) => {
+      item.classList.add("scroll-reveal");
+      item.style.setProperty(
+        "--reveal-delay",
+        `${Math.min(index * 50, 250)}ms`,
+      );
+      observer.observe(item);
+    });
+  });
+</script>
 
 </head>
 <body id="top">

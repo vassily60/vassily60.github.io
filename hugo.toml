@@ -24,7 +24,7 @@ canonifyURLs = false
   comments = false
 
   [params.homeInfoParams]
-    Title = "Welcome to my blog ! 👋"
+    Title = "Welcome to my blog ! "
     Content = "I am Vassily, a student at Columbia University, and I use this blog to share a little bit about my passions. From coding and building robots to reviewing the books I read, you will learn a bit more about me here. Enjoy exploring !"
 
   [[params.socialIcons]]
