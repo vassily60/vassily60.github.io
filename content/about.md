@@ -9,13 +9,13 @@ summary: "A bit about who I am."
 Hi, I'm Vassily, a rising senior at Columbia University studying Computer Engineering.
 
 <figure class="about-inline-image">
-	<img src="/images/id_1.jpeg" alt="Vassily holding his Columbia University ID on campus" loading="lazy" />
+	<img src="/images/id_1.jpeg" alt="" loading="lazy" />
 </figure>
 
 This past summer I worked at STMicroelectronics on pixel design and characterization for optical sensors. I previously worked at a startup in Paris on LLMs architecture design and also in a biomedical lab at Columbia University on a project involving ultrasound localization microscopy (ULM).
 
 My research interests range from VLSI low-power design to sensor and mixed-signal circuit design. I have always loved playing with robots, sensors, and all kinds of connected objects, but what fascinates me is the chips inside!
-Feel free to reach out if you have any questions or want to connect vtl2110 [at] columbia [dot] edu.
+Feel free to reach out if you have any questions: vtl2110t[at]columbia[dot]edu.
 
 Important: No AI was used to write this content
 
@@ -24,7 +24,7 @@ Important: No AI was used to write this content
 ### Fall 2026
 
 - Digital VLSI Circuits (ELEN4321) - Prof. Kenneth Shepard
-- Adavanced Solid State Device (ELEN4106) - Prof. Savannah Eisner
+- Advanced Solid State Device (ELEN4106) - Prof. Savannah Eisner
 - Analog Electronic (ELEN4312) - Prof. Subhajit Ray
 - Fundamentals of Photonics (ELEN4411) - Prof. Michal Lipson
 - Advanced Logic Design (ELEN4823) - Prof. Mingoo Seok
@@ -36,8 +36,8 @@ Important: No AI was used to write this content
 - Advanced Programming (COMS3157) - Prof. Brian Borowski
 - Electronic Circuits (ELEN3331) - Prof. David Vallancourt
 - Digital Image Processing (ELEN4830) - Prof. Christin Hendon
-- Electronics Ciruits Lab
-- Digitial System Lab
+- Electronics Circuits Lab
+- Digital System Lab
 
 ### Fall 2025
 
@@ -45,11 +45,11 @@ Important: No AI was used to write this content
 - Circuit Analysis (ELEN3201) - Prof. Charles Zukowski
 - Data Structures (COMS3134) - Prof. Brian Borowski
 - Intro to Robotics (MECE4602) - Prof. Sunil Agrawal
-- Fundamenals of Computer Systems (CSEE3827) - Prof. Martha Kim
+- Fundamentals of Computer Systems (CSEE3827) - Prof. Martha Kim
 - Signal & System Lab
 - Circuit Analysis Lab
 
 ## Useful links
 
-▶️ [Linkedin](https://www.linkedin.com/in/vassilylombard/) 🐙 [Github](https://github.com/vassily60)
+▶️ [LinkedIn](https://www.linkedin.com/in/vassilylombard/) 🐙 [GitHub](https://github.com/vassily60)
 📄 [Resume](/papers/resumeVassilyupdated.pdf)

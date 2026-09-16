@@ -117,6 +117,29 @@ a:focus-visible {
   margin: 0;
 }
 
+.home-hero-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+  margin-top: 1.25rem;
+}
+
+.home-hero-contact a {
+  color: var(--site-accent);
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.home-hero-contact a:hover,
+.home-hero-contact a:focus-visible {
+  color: var(--site-teal);
+  transform: translateY(-2px);
+}
+
 .home-hero-image {
   flex: 0 1 300px;
   display: flex;
