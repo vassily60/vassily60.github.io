@@ -12,7 +12,7 @@ canonifyURLs = false
   author = "Vassily Lombard"
   description = "A blog about science, curiosity, and the ideas that matter."
   defaultTheme = "auto"
-  ShowReadingTime = true
+  ShowReadingTime = false
   ShowShareButtons = false
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
@@ -55,6 +55,12 @@ canonifyURLs = false
     name = "About"
     url = "/about/"
     weight = 40
+
+  [[menu.main]]
+    identifier = "experience"
+    name = "Experiences"
+    url = "/experience/"
+    weight = 45
 
   [[menu.main]]
     identifier = "search"

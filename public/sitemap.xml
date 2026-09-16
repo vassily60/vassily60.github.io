@@ -33,6 +33,8 @@
   </url><url>
     <loc>http://localhost:1313/projects/pixel_readout/</loc>
   </url><url>
+    <loc>http://localhost:1313/experience/</loc>
+  </url><url>
     <loc>http://localhost:1313/projects/drone_imaging/</loc>
   </url><url>
     <loc>http://localhost:1313/readings/descartes/</loc>

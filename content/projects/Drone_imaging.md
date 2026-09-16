@@ -1,6 +1,7 @@
 ---
 title: "GPS-Free Drone Navigation Using Computer Vision"
 description: "What if a drone could figure out where it is using nothing but its camera?"
+weight: 40
 cover:
   image: "/images/cover.jpg"
   alt: "Drone and Satellite taking photos at different altitudes"

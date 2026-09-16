@@ -9,6 +9,34 @@
     <lastBuildDate>Thu, 21 May 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Design and Characterization of a Pixel Readout Chip</title>
+      <link>http://localhost:1313/projects/pixel_readout/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/pixel_readout/</guid>
+      <description>How does an matrix of pixels work and convert light to an image ?</description>
+    </item>
+    <item>
+      <title>BiCMOS Bandgap Voltage Reference</title>
+      <link>http://localhost:1313/projects/bandgap_voltage_reference/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/bandgap_voltage_reference/</guid>
+      <description>Designing and characterizing a temperature-stable 1.2 V reference in a 130-nm CMOS process.</description>
+    </item>
+    <item>
+      <title>FPGA Digital Piano</title>
+      <link>http://localhost:1313/projects/digital_electronics_piano/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/digital_electronics_piano/</guid>
+      <description>Designing a VHDL digital piano with note selection, clock division, and seven-segment display output.</description>
+    </item>
+    <item>
+      <title>GPS-Free Drone Navigation Using Computer Vision</title>
+      <link>http://localhost:1313/projects/drone_imaging/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/drone_imaging/</guid>
+      <description>What if a drone could figure out where it is using nothing but its camera?</description>
+    </item>
+    <item>
       <title>Why Analog Communication is Still Relevant in a Digital World</title>
       <link>http://localhost:1313/posts/first_post/</link>
       <pubDate>Thu, 21 May 2026 00:00:00 +0000</pubDate>
@@ -23,18 +51,114 @@
       <description>A bit about who I am.</description>
     </item>
     <item>
-      <title>Design and Characterization of a Pixel Readout chip to emulate Global Shutter</title>
-      <link>http://localhost:1313/projects/pixel_readout/</link>
+      <title>Experiences</title>
+      <link>http://localhost:1313/experience/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/pixel_readout/</guid>
-      <description>How does an matrix of pixels work and convert light to an image ?</description>
-    </item>
-    <item>
-      <title>GPS-Free Drone Navigation Using Computer Vision</title>
-      <link>http://localhost:1313/projects/drone_imaging/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/drone_imaging/</guid>
-      <description>What if a drone could figure out where it is using nothing but its camera?</description>
+      <guid>http://localhost:1313/experience/</guid>
+      <description>&lt;div class=&#34;experience-page&#34;&gt;
+  &lt;div class=&#34;experience-intro&#34;&gt;
+    &lt;p class=&#34;experience-kicker&#34;&gt;Exiting Future Opportunities&lt;/p&gt;
+    &lt;p class=&#34;experience-lede&#34;&gt;&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;experience-timeline&#34;&gt;
+    &lt;article class=&#34;experience-item experience-item-left&#34;&gt;
+      &lt;div class=&#34;experience-marker&#34; aria-hidden=&#34;true&#34;&gt;2026&lt;/div&gt;
+      &lt;div class=&#34;experience-media&#34;&gt;
+        &lt;img src=&#34;http://localhost:1313/images/stimage.png&#34; alt=&#34;Pixel array representing semiconductor design&#34; loading=&#34;lazy&#34; /&gt;
+      &lt;/div&gt;
+      &lt;details class=&#34;experience-card&#34; open&gt;
+        &lt;summary&gt;
+          &lt;span class=&#34;experience-period&#34;&gt;May 2026 - Now&lt;/span&gt;
+          &lt;span class=&#34;experience-role&#34;&gt;Pixel Design and Characterization Intern @ STMicroelectronics&lt;/span&gt;
+          &lt;span class=&#34;experience-toggle&#34; aria-hidden=&#34;true&#34;&gt;+&lt;/span&gt;
+        &lt;/summary&gt;
+        &lt;div class=&#34;experience-card-body&#34;&gt;
+          &lt;ul&gt;
+            &lt;li&gt;Designing ADC, sampling, and readout-chain sub-blocks in Cadence and Spectre.&lt;/li&gt;
+            &lt;li&gt;Characterizing silicon in a cleanroom, including dark current and quantum efficiency measurements.&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+      &lt;/details&gt;
+    &lt;/article&gt;
+    &lt;article class=&#34;experience-item experience-item-right&#34;&gt;
+      &lt;div class=&#34;experience-marker&#34; aria-hidden=&#34;true&#34;&gt;2025&lt;/div&gt;
+      &lt;div class=&#34;experience-media&#34;&gt;
+        &lt;img src=&#34;http://localhost:1313/images/columbia.png&#34; alt=&#34;Portrait representing research and university life&#34; loading=&#34;lazy&#34; /&gt;
+      &lt;/div&gt;
+      &lt;details class=&#34;experience-card&#34; open&gt;
+        &lt;summary&gt;
+          &lt;span class=&#34;experience-period&#34;&gt;Nov. 2025 - May 2026&lt;/span&gt;
+          &lt;span class=&#34;experience-role&#34;&gt;Research Assistant @ Columbia University&lt;/span&gt;
+          &lt;span class=&#34;experience-toggle&#34; aria-hidden=&#34;true&#34;&gt;+&lt;/span&gt;
+        &lt;/summary&gt;
+        &lt;div class=&#34;experience-card-body&#34;&gt;
+          &lt;ul&gt;
+            &lt;li&gt;Created metrics to analyze and compare ultrasound brain images.&lt;/li&gt;
+            &lt;li&gt;Engineered a bubble-tracking algorithm that reconstructed brain-vessel maps with 86% accuracy.&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+      &lt;/details&gt;
+    &lt;/article&gt;
+    &lt;article class=&#34;experience-item experience-item-left&#34;&gt;
+      &lt;div class=&#34;experience-marker&#34; aria-hidden=&#34;true&#34;&gt;2025&lt;/div&gt;
+      &lt;div class=&#34;experience-media&#34;&gt;
+        &lt;img src=&#34;http://localhost:1313/images/PaloIt.jpg&#34; alt=&#34;Machine learning model data flow&#34; loading=&#34;lazy&#34; /&gt;
+      &lt;/div&gt;
+      &lt;details class=&#34;experience-card&#34; open&gt;
+        &lt;summary&gt;
+          &lt;span class=&#34;experience-period&#34;&gt;May 2025 - Aug. 2025&lt;/span&gt;
+          &lt;span class=&#34;experience-role&#34;&gt;Machine Learning Engineer Intern @ Palo IT&lt;/span&gt;
+          &lt;span class=&#34;experience-toggle&#34; aria-hidden=&#34;true&#34;&gt;+&lt;/span&gt;
+        &lt;/summary&gt;
+        &lt;div class=&#34;experience-card-body&#34;&gt;
+          &lt;ul&gt;
+            &lt;li&gt;Optimized Mixtral&#39;s mixture-of-experts routing to improve expert load balancing.&lt;/li&gt;
+            &lt;li&gt;Developed a local chatbot with MCP servers and a serverless RAG application using AWS.&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+      &lt;/details&gt;
+    &lt;/article&gt;
+    &lt;article class=&#34;experience-item experience-item-right&#34;&gt;
+      &lt;div class=&#34;experience-marker&#34; aria-hidden=&#34;true&#34;&gt;2024&lt;/div&gt;
+      &lt;div class=&#34;experience-media&#34;&gt;
+        &lt;img src=&#34;http://localhost:1313/images/quakerrob.PNG&#34; alt=&#34;Robot used for sign language interaction&#34; loading=&#34;lazy&#34; /&gt;
+      &lt;/div&gt;
+      &lt;details class=&#34;experience-card&#34; open&gt;
+        &lt;summary&gt;
+          &lt;span class=&#34;experience-period&#34;&gt;Sept. 2024 - May 2025&lt;/span&gt;
+          &lt;span class=&#34;experience-role&#34;&gt;Robotics Club President @ Earlham College&lt;/span&gt;
+          &lt;span class=&#34;experience-toggle&#34; aria-hidden=&#34;true&#34;&gt;+&lt;/span&gt;
+        &lt;/summary&gt;
+        &lt;div class=&#34;experience-card-body&#34;&gt;
+          &lt;ul&gt;
+            &lt;li&gt;Led coding and robot-building workshops using VEX IQ and Arduino platforms.&lt;/li&gt;
+            &lt;li&gt;Organized the club&#39;s first competition, with five teams building and programming line-following robots.&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+      &lt;/details&gt;
+    &lt;/article&gt;
+    &lt;article class=&#34;experience-item experience-item-left&#34;&gt;
+      &lt;div class=&#34;experience-marker&#34; aria-hidden=&#34;true&#34;&gt;2024&lt;/div&gt;
+      &lt;div class=&#34;experience-media&#34;&gt;
+        &lt;img src=&#34;http://localhost:1313/images/nationalgeographic.png&#34; alt=&#34;Computer vision research imagery&#34; loading=&#34;lazy&#34; /&gt;
+      &lt;/div&gt;
+      &lt;details class=&#34;experience-card&#34; open&gt;
+        &lt;summary&gt;
+          &lt;span class=&#34;experience-period&#34;&gt;Jan. 2024 - Jul. 2024&lt;/span&gt;
+          &lt;span class=&#34;experience-role&#34;&gt;Research Assistant @ Earlham College&lt;/span&gt;
+          &lt;span class=&#34;experience-toggle&#34; aria-hidden=&#34;true&#34;&gt;+&lt;/span&gt;
+        &lt;/summary&gt;
+        &lt;div class=&#34;experience-card-body&#34;&gt;
+          &lt;ul&gt;
+            &lt;li&gt;Developed a TensorFlow computer vision model to identify fish in underwater imagery ahead of a fish-farm installation in Eastern Iceland.&lt;/li&gt;
+            &lt;li&gt;Mapped coastal erosion along a fjord in Eastern Iceland with 3D drone imagery.&lt;/li&gt;
+            &lt;li&gt;Used drones to map a glacier on Iceland’s southern coast to study the impacts of climate change.&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+      &lt;/details&gt;
+    &lt;/article&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</description>
     </item>
     <item>
       <title>Méditations Métaphysiques - René Descartes</title>

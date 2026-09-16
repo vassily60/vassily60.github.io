@@ -10,7 +10,7 @@
 <meta name="description" content="Below you can find a selection of personal projects I enjoyed working on. Hope you have fun reading about them and don&rsquo;t hesitate to reach out if you have any questions !">
 <meta name="author" content="Vassily Lombard">
 <link rel="canonical" href="http://localhost:1313/projects/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.0021018ca058952d6d740f2dac33b0d21f1c0fe9ddcfdaba7a3dea6f5b552fdc.css" integrity="sha256-ACEBjKBYlS1tdA8trDOw0h8cD&#43;ndz9q6ej3qb1tVL9w=" rel="stylesheet">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.58b3120ebc4a2045090a30d0105f20302cc6dd9b05d98c821dcb8ba3f4ecc039.css" integrity="sha256-WLMSDrxKIEUJCjDQEF8gMCzG3ZsF2YyCHcuLo/TswDk=" rel="stylesheet">
 <link rel="icon" href="http://localhost:1313/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
@@ -137,6 +137,11 @@
                 </a>
             </li>
             <li>
+                <a href="http://localhost:1313/experience/" title="Experiences">
+                    <span>Experiences</span>
+                </a>
+            </li>
+            <li>
                 <a href="http://localhost:1313/search/" title="Search (Alt &#43; /)" accesskey=/>
                     <span>Search</span>
                 </a>
@@ -158,94 +163,159 @@
 
 
 </div>
-          
+       
+<div class="projects-list-grid">
+       
 
-<article class="post-entry">
-    
+  <article class="post-entry project-entry">
+      
 <figure class="entry-cover">
         <img loading="lazy" src="http://localhost:1313/images/photopixel.jpg" alt="Image of an array of pixels">
 </figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">
-      Design and Characterization of a Pixel Readout chip to emulate Global Shutter 
-    </h2>
-  </header>
-  
-  <div class="entry-content">
-    <p>
-      Work in progress @ STMicroelectronics !
-
-    </p>
-  </div>
-   
-  <footer class="entry-footer"><span>1 min</span>&nbsp;·&nbsp;<span>Vassily Lombard</span></footer>
-  
-  <a
-    class="entry-link"
-    aria-label="post link to Design and Characterization of a Pixel Readout chip to emulate Global Shutter"
-    href="http://localhost:1313/projects/pixel_readout/"
-  ></a>
-</article>
-   
-
-<article class="post-entry">
+    <header class="entry-header">
+      <h2 class="entry-hint-parent">
+        Design and Characterization of a Pixel Readout Chip 
+      </h2>
+    </header>
     
+    <div class="entry-content">
+      <p>
+        Work in progress @ STMicroelectronics !
+
+      </p>
+    </div>
+     
+    <footer class="entry-footer"><span>Vassily Lombard</span></footer>
+    
+    <a
+      class="entry-link"
+      aria-label="post link to Design and Characterization of a Pixel Readout Chip"
+      href="http://localhost:1313/projects/pixel_readout/"
+    ></a>
+  </article>
+      
+
+  <article class="post-entry project-entry">
+      
+<figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/bandgap.png" alt="Pixel array image used as a temporary cover for the bandgap reference project">
+</figure>
+    <header class="entry-header">
+      <h2 class="entry-hint-parent">
+        BiCMOS Bandgap Voltage Reference 
+      </h2>
+    </header>
+    
+    <div class="entry-content">
+      <p>
+        February 2026 - April 2026
+Cadence Virtuoso · Spectre · 130-nm CMOS PDK
+Project Overview I designed a transistor-level 1.2 V BiCMOS bandgap voltage reference that generates a stable voltage across temperature and process variations. The project focused on analog circuit design, simulation, and physical-layout verification.
+What I Designed Built a temperature-compensated reference using PTAT and CTAT voltage components. Designed the bipolar devices, current mirrors, and feedback circuitry in Cadence Virtuoso. Combined the opposing temperature dependencies to produce a stable 1.2 V output. Characterization I evaluated the reference with Cadence Spectre across the conditions that matter for an integrated analog circuit:
+...
+      </p>
+    </div>
+     
+    <footer class="entry-footer"><span>Vassily Lombard</span></footer>
+    
+    <a
+      class="entry-link"
+      aria-label="post link to BiCMOS Bandgap Voltage Reference"
+      href="http://localhost:1313/projects/bandgap_voltage_reference/"
+    ></a>
+  </article>
+      
+
+  <article class="post-entry project-entry">
+      
+<figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/fpga.jpg" alt="Temporary digital logic diagram used as the FPGA piano project cover">
+</figure>
+    <header class="entry-header">
+      <h2 class="entry-hint-parent">
+        FPGA Digital Piano 
+      </h2>
+    </header>
+    
+    <div class="entry-content">
+      <p>
+        VHDL · FPGA design · Vivado simulation · Seven-segment display
+Project Goal I designed a digital piano on an FPGA that turns switch and push-button inputs into musical notes. The system decodes the selected note, generates the correct tone using a clock divider, and displays the note and octave on a four-digit seven-segment display.
+How It Works Encoded the seven natural notes using one-hot switch inputs. Used push-buttons to select flats, sharps, and the upper octave. Converted the selected note into a divider value based on the desired audio frequency. Generated the speaker clock with a counter and toggle-based clock divider. Scanned the seven-segment display to show the note letter, octave, and sharp indicator. Added reset and silence behavior for invalid or empty switch combinations. Verification I created VHDL testbench stimulus to exercise the complete range of inputs, including all seven notes, sharps, flats, octave changes, silence, rapid switching, and non-sequential note changes. The simulations confirmed that the input signals and display outputs responded to the programmed test cases.
+...
+      </p>
+    </div>
+     
+    <footer class="entry-footer"><span>Vassily Lombard</span></footer>
+    
+    <a
+      class="entry-link"
+      aria-label="post link to FPGA Digital Piano"
+      href="http://localhost:1313/projects/digital_electronics_piano/"
+    ></a>
+  </article>
+      
+
+  <article class="post-entry project-entry">
+      
 <figure class="entry-cover">
         <img loading="lazy" src="http://localhost:1313/images/cover.jpg" alt="Drone and Satellite taking photos at different altitudes">
 </figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">
-      GPS-Free Drone Navigation Using Computer Vision 
-    </h2>
-  </header>
-  
-  <div class="entry-content">
-    <p>
-      View on GitHub · Read the paper
+    <header class="entry-header">
+      <h2 class="entry-hint-parent">
+        GPS-Free Drone Navigation Using Computer Vision 
+      </h2>
+    </header>
+    
+    <div class="entry-content">
+      <p>
+        View on GitHub · Read the paper
 In Summary This project builds a visual localization pipeline that estimates a drone’s GPS position by matching its camera feed against a pre-loaded satellite map — no GPS, no wireless signal required. It compares two classical feature matching algorithms, SIFT and ORB, and tests them under various degraded image conditions to find out where each one breaks down.
 Context &amp; Motivation I have always been fascinated by the idea that a machine can look at the world and figure out where it is, the same way you might recognize a neighborhood from a window seat on a plane. When I came across the problem of GPS-denied drone navigation, it felt like the perfect intersection of computer vision, real-world constraints, and genuinely high stakes applications — search and rescue, military operations, remote exploration. The question that really hooked me was not just “can we do this?” but “how robust is it really?” Most research papers test their algorithms under near-perfect conditions, but in the real world, images are blurry, noisy, and low resolution. I wanted to know exactly at what point the system stops working — and whether the choice of algorithm actually matters. ...
-    </p>
-  </div>
-   
-  <footer class="entry-footer"><span>3 min</span>&nbsp;·&nbsp;<span>Vassily Lombard</span></footer>
-  
-  <a
-    class="entry-link"
-    aria-label="post link to GPS-Free Drone Navigation Using Computer Vision"
-    href="http://localhost:1313/projects/drone_imaging/"
-  ></a>
-</article>
-   
-
-<article class="post-entry">
+      </p>
+    </div>
+     
+    <footer class="entry-footer"><span>Vassily Lombard</span></footer>
     
+    <a
+      class="entry-link"
+      aria-label="post link to GPS-Free Drone Navigation Using Computer Vision"
+      href="http://localhost:1313/projects/drone_imaging/"
+    ></a>
+  </article>
+      
+
+  <article class="post-entry project-entry">
+      
 <figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/robot-cover.jpg" alt="Robot dancing that could be controlled by sign language">
+        <img loading="lazy" src="http://localhost:1313/images/robotsign.png" alt="My robot ready to recognize sign language">
 </figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">
-      Sign Language Controlled Robot 
-    </h2>
-  </header>
-  
-  <div class="entry-content">
-    <p>
-      View on GitHub · Read the paper
+    <header class="entry-header">
+      <h2 class="entry-hint-parent">
+        Sign Language Controlled Robot 
+      </h2>
+    </header>
+    
+    <div class="entry-content">
+      <p>
+        true View on GitHub · Read the paper
 I Built a Robot That Understands Sign Language The Idea I wanted to build a robot that you could control just by showing it hand signs, no remote, no keyboard, just American Sign Language (ASL). The goal was to keep it simple, fast, and cheap enough for anyone to build.
 How It Works The system has two main parts:
 A camera mounted on a small robot (built with a Raspberry Pi) A nearby laptop that does the “thinking” The robot takes a picture of your hand sign and sends it wirelessly to the laptop. The laptop figures out which sign you made and sends the answer back. The robot then moves in that direction.
 ...
-    </p>
-  </div>
+      </p>
+    </div>
+     
+    <footer class="entry-footer"><span>Vassily Lombard</span></footer>
+    
+    <a
+      class="entry-link"
+      aria-label="post link to Sign Language Controlled Robot"
+      href="http://localhost:1313/projects/sign_language/"
+    ></a>
+  </article>
    
-  <footer class="entry-footer"><span>3 min</span>&nbsp;·&nbsp;<span>Vassily Lombard</span></footer>
-  
-  <a
-    class="entry-link"
-    aria-label="post link to Sign Language Controlled Robot"
-    href="http://localhost:1313/projects/sign_language/"
-  ></a>
-</article>
+</div>
     
     </main>
     

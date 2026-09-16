@@ -8,11 +8,25 @@
     <language>en-us</language>
     <atom:link href="http://localhost:1313/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Design and Characterization of a Pixel Readout chip to emulate Global Shutter</title>
+      <title>Design and Characterization of a Pixel Readout Chip</title>
       <link>http://localhost:1313/projects/pixel_readout/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/projects/pixel_readout/</guid>
       <description>How does an matrix of pixels work and convert light to an image ?</description>
+    </item>
+    <item>
+      <title>BiCMOS Bandgap Voltage Reference</title>
+      <link>http://localhost:1313/projects/bandgap_voltage_reference/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/bandgap_voltage_reference/</guid>
+      <description>Designing and characterizing a temperature-stable 1.2 V reference in a 130-nm CMOS process.</description>
+    </item>
+    <item>
+      <title>FPGA Digital Piano</title>
+      <link>http://localhost:1313/projects/digital_electronics_piano/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/digital_electronics_piano/</guid>
+      <description>Designing a VHDL digital piano with note selection, clock division, and seven-segment display output.</description>
     </item>
     <item>
       <title>GPS-Free Drone Navigation Using Computer Vision</title>

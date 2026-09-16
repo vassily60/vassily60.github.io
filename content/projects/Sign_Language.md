@@ -1,10 +1,11 @@
 ---
 title: "Sign Language Controlled Robot"
 description: "What if a robot could understand sign language and respond to it in real time?"
+weight: 50
 cover:
-  image: "/images/robot-cover.jpg"
-  alt: "Robot dancing that could be controlled by sign language"
-  caption: "Source : Philosophy Magazine"
+  image: "/images/robotsign.png"
+  alt: "My robot ready to recognize sign language"
+  caption: "Source : My robot"
   relative: true
 ---
 
