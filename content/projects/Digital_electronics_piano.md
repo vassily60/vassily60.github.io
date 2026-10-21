@@ -56,3 +56,5 @@ These figures document the main verification steps from the lab report. One plac
 - Clock dividers and counters
 - Seven-segment display multiplexing
 - Digital logic testbenches
+
+📄 [Read the report](/papers/DigitalElectronics.pdf)

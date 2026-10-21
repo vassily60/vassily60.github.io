@@ -52,4 +52,4 @@ Important: No AI was used to write this content
 ## Useful links
 
 ▶️ [LinkedIn](https://www.linkedin.com/in/vassilylombard/) 🐙 [GitHub](https://github.com/vassily60)
-📄 [Resume](/papers/resumeVassilyupdated.pdf)
+📄 [Resume](/papers/Vassily_Lombard_Resume_0924.pdf)
