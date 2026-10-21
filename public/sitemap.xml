@@ -54,5 +54,7 @@
     <loc>http://localhost:1313/search/</loc>
   </url><url>
     <loc>http://localhost:1313/readings/spqr/</loc>
+  </url><url>
+    <loc>http://localhost:1313/readings/lerougeetnoir/</loc>
   </url>
 </urlset>

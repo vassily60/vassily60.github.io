@@ -8,14 +8,7 @@
     <language>en-us</language>
     <atom:link href="http://localhost:1313/readings/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Le Rouge et le Noir - Stendhal</title>
-      <link>http://localhost:1313/readings/lerougeetnoir/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/readings/lerougeetnoir/</guid>
-      <description>Stendhal&amp;#39;s novel about social ambition in the post Napoleonic era</description>
-    </item>
-    <item>
-      <title>Méditations Métaphysiques - René Descartes</title>
+      <title>Meditations on First Philosophy - René Descartes</title>
       <link>http://localhost:1313/readings/descartes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/readings/descartes/</guid>
@@ -29,11 +22,18 @@
       <description>Jean-Paul Sartre&amp;#39;s first and most famous novel</description>
     </item>
     <item>
-      <title>SPQR (Histoire de l&#39;ancienne Rome) - Mary Beard</title>
+      <title>SPQR - Mary Beard</title>
       <link>http://localhost:1313/readings/spqr/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/readings/spqr/</guid>
       <description>Everything you need to know about Rome</description>
+    </item>
+    <item>
+      <title>The Red and the Black - Stendhal</title>
+      <link>http://localhost:1313/readings/lerougeetnoir/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/readings/lerougeetnoir/</guid>
+      <description>Stendhal&amp;#39;s novel about social ambition in the post Napoleonic era</description>
     </item>
   </channel>
 </rss>

@@ -1,5 +1,5 @@
 ---
-title: "SPQR (Histoire de l'ancienne Rome) - Mary Beard"
+title: "SPQR - Mary Beard"
 description: "Everything you need to know about Rome"
 ---
 
