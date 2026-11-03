@@ -9,7 +9,8 @@ cover:
   relative: true
 ---
 
-**February 2026 - April 2026**  
+<!-- **July 2026 - August 2026**   -->
+
 _Cadence Virtuoso · Spectre · 130-nm CMOS PDK_
 
 ## Project Overview
