@@ -16,11 +16,18 @@
       <description>How does an matrix of pixels work and convert light to an image ?</description>
     </item>
     <item>
-      <title>BiCMOS Bandgap Voltage Reference</title>
+      <title>8-bit Ripple-Carry Adder</title>
+      <link>http://localhost:1313/projects/8bitadder/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/8bitadder/</guid>
+      <description>A transistor-level 8-bit signed ripple-carry adder with addition, subtraction, and overflow detection.</description>
+    </item>
+    <item>
+      <title>CMOS Bandgap Voltage Reference</title>
       <link>http://localhost:1313/projects/bandgap_voltage_reference/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/projects/bandgap_voltage_reference/</guid>
-      <description>Designing and characterizing a temperature-stable 1.2 V reference in a 130-nm CMOS process.</description>
+      <description>Designing and characterizing a temperature stable 1.2 V reference.</description>
     </item>
     <item>
       <title>FPGA Digital Piano</title>

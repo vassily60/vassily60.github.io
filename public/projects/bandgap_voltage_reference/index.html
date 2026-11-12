@@ -5,9 +5,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
-<title>BiCMOS Bandgap Voltage Reference | Vassily Lombard</title>
+<title>CMOS Bandgap Voltage Reference | Vassily Lombard</title>
 <meta name="keywords" content="">
-<meta name="description" content="Designing and characterizing a temperature-stable 1.2 V reference in a 130-nm CMOS process.">
+<meta name="description" content="Designing and characterizing a temperature stable 1.2 V reference.">
 <meta name="author" content="Vassily Lombard">
 <link rel="canonical" href="http://localhost:1313/projects/bandgap_voltage_reference/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.26479bbddbba60ebb9b48e8e9c1d80f64c060e4c538486de707e5f08f7548af0.css" integrity="sha256-Jkebvdu6YOu5tI6OnB2A9kwGDkxThIbecH5fCPdUivA=" rel="stylesheet">
@@ -186,17 +186,17 @@
   <header class="post-header">
     <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/projects/">Projects</a></div>
     <h1 class="post-title entry-hint-parent">
-      BiCMOS Bandgap Voltage Reference
+      CMOS Bandgap Voltage Reference
     </h1>
     <div class="post-description">
-      Designing and characterizing a temperature-stable 1.2 V reference in a 130-nm CMOS process.
+      Designing and characterizing a temperature stable 1.2 V reference.
     </div>
     <div class="post-meta"><span>Vassily Lombard</span>
 
 </div>
   </header> 
 <figure class="entry-cover">
-        <img loading="eager" src="http://localhost:1313/images/bandgap.png" alt="Pixel array image used as a temporary cover for the bandgap reference project">
+        <img loading="eager" src="http://localhost:1313/images/bandgaap.webp" alt="Simple Bandgap Circuit Diagram">
         <figcaption>Simple Bandgap Circuit Diagram</figcaption>
 </figure><div class="toc">
     <details >
@@ -212,19 +212,16 @@
                 <li>
                     <a href="#characterization" aria-label="Characterization">Characterization</a></li>
                 <li>
-                    <a href="#physical-verification" aria-label="Physical Verification">Physical Verification</a></li>
-                <li>
-                    <a href="#tools-and-technologies" aria-label="Tools and Technologies">Tools and Technologies</a>
+                    <a href="#physical-verification" aria-label="Physical Verification">Physical Verification</a>
                 </li>
             </ul>
         </div>
     </details>
 </div>
 
-  <div class="post-content"><p><strong>February 2026 - April 2026</strong><br>
-<em>Cadence Virtuoso · Spectre · 130-nm CMOS PDK</em></p>
+  <div class="post-content"><!-- **July 2026 - August 2026**   -->
 <h2 id="project-overview">Project Overview<a hidden class="anchor" aria-hidden="true" href="#project-overview">#</a></h2>
-<p>I designed a transistor-level 1.2 V BiCMOS bandgap voltage reference that generates a stable voltage across temperature and process variations. The project focused on analog circuit design, simulation, and physical-layout verification.</p>
+<p>I designed a transistor-level 1.2 V bandgap voltage reference that generates a stable voltage across temperature and process variations. In general, it is super important for a circuit to have a stable reference voltage otherwise some components might behave in the wrong way. When I say stable, I mean that the voltage should not change, or change very minimally, with temperature and process variations. So I designed a bandgap reference that uses the opposing temperature dependencies of two voltage components to produce a stable output.</p>
 <h2 id="what-i-designed">What I Designed<a hidden class="anchor" aria-hidden="true" href="#what-i-designed">#</a></h2>
 <ul>
 <li>Built a temperature-compensated reference using PTAT and CTAT voltage components.</li>
@@ -235,22 +232,13 @@
 <p>I evaluated the reference with Cadence Spectre across the conditions that matter for an integrated analog circuit:</p>
 <ul>
 <li>Temperature sweeps</li>
-<li>Power-supply rejection ratio (PSRR)</li>
+<li>Power supply rejection ratio (PSRR)</li>
 <li>Noise and power consumption</li>
 <li>Process, voltage, and temperature (PVT) corners</li>
 <li>Monte Carlo mismatch analysis</li>
 </ul>
 <h2 id="physical-verification">Physical Verification<a hidden class="anchor" aria-hidden="true" href="#physical-verification">#</a></h2>
-<p>I verified the physical IC layout with design-rule checking (DRC), layout-versus-schematic (LVS) verification, and parasitic extraction. I then compared pre-layout and post-layout performance to understand the impact of physical implementation on the circuit.</p>
-<h2 id="tools-and-technologies">Tools and Technologies<a hidden class="anchor" aria-hidden="true" href="#tools-and-technologies">#</a></h2>
-<ul>
-<li>Cadence Virtuoso</li>
-<li>Cadence Spectre</li>
-<li>BiCMOS circuit design</li>
-<li>PTAT/CTAT temperature compensation</li>
-<li>130-nm CMOS PDK</li>
-<li>DRC, LVS, and parasitic extraction</li>
-</ul>
+<p>I verified the physical IC layout was DRC and LVS clean. Parasitic extraction was also performed to compare pre-layout and post-layout performance to understand the impact of physical implementation on the circuit.</p>
 <!-- ## Project Evidence
 
 These are the key moments worth documenting as the design develops. Replace each placeholder with a screenshot or photo of your own work.

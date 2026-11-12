@@ -196,8 +196,8 @@
 </div>
   </header> 
 <figure class="entry-cover">
-        <img loading="eager" src="http://localhost:1313/images/fpga.jpg" alt="Temporary digital logic diagram used as the FPGA piano project cover">
-        <figcaption>Temporary cover image</figcaption>
+        <img loading="eager" src="http://localhost:1313/images/fpga.jpg" alt="">
+        
 </figure><div class="toc">
     <details >
         <summary accesskey="c" title="(Alt + C)">
@@ -214,15 +214,14 @@
                 <li>
                     <a href="#project-graphs--figures" aria-label="Project Graphs &amp; Figures">Project Graphs &amp; Figures</a></li>
                 <li>
-                    <a href="#tools-and-technologies" aria-label="Tools and Technologies">Tools and Technologies</a>
+                    <a href="#conclusion--final-notes" aria-label="Conclusion &amp; Final Notes">Conclusion &amp; Final Notes</a>
                 </li>
             </ul>
         </div>
     </details>
 </div>
 
-  <div class="post-content"><p><em>VHDL · FPGA design · Vivado simulation · Seven-segment display</em></p>
-<h2 id="project-goal">Project Goal<a hidden class="anchor" aria-hidden="true" href="#project-goal">#</a></h2>
+  <div class="post-content"><h2 id="project-goal">Project Goal<a hidden class="anchor" aria-hidden="true" href="#project-goal">#</a></h2>
 <p>I designed a digital piano on an FPGA that turns switch and push-button inputs into musical notes. The system decodes the selected note, generates the correct tone using a clock divider, and displays the note and octave on a four-digit seven-segment display.</p>
 <h2 id="how-it-works">How It Works<a hidden class="anchor" aria-hidden="true" href="#how-it-works">#</a></h2>
 <ul>
@@ -237,30 +236,15 @@
 <p>I created VHDL testbench stimulus to exercise the complete range of inputs, including all seven notes, sharps, flats, octave changes, silence, rapid switching, and non-sequential note changes. The simulations confirmed that the input signals and display outputs responded to the programmed test cases.</p>
 <p>The design also revealed a practical limitation of behavioral simulation: the FPGA&rsquo;s MMCM clock manager requires hardware timing to lock, so some downstream outputs remain uninitialized in simulation even while the input stimulus is applied correctly.</p>
 <h2 id="project-graphs--figures">Project Graphs &amp; Figures<a hidden class="anchor" aria-hidden="true" href="#project-graphs--figures">#</a></h2>
-<p>These figures document the main verification steps from the lab report. One placeholder remains for the seven-segment display output.</p>
-<div class="project-photo-grid">
-  <figure class="project-photo-placeholder project-photo-real">
-    <img src="/images/clock_divider.png" alt="Clock divider waveforms showing the clock, counter, trigger, output clock, and one-shot signals" loading="lazy" />
-    <figcaption><strong>Clock divider waveforms</strong><br />The CLK, counter, trigger, CLK_OUT, and ONE_SHOT signals show how the input clock becomes the audio clock.</figcaption>
-  </figure>
-  <figure class="project-photo-placeholder project-photo-real">
-    <img src="/images/note_verification.png" alt="Chart comparing target and actual piano note frequencies" loading="lazy" />
-    <figcaption><strong>Frequency verification</strong><br />The target-versus-actual note-frequency graph verifies the divider calculations used for the piano notes.</figcaption>
-  </figure>
-  <figure class="project-photo-placeholder project-photo-real">
-    <img src="/images/waveform.png" alt="Vivado waveform showing note-switching testbench signals" loading="lazy" />
-    <figcaption><strong>Simulation testbench</strong><br />The Vivado waveform shows switch_in cycling through C to B, modifier changes, reset behavior, and rapid note switching.</figcaption>
-  </figure>
-</div>
-<h2 id="tools-and-technologies">Tools and Technologies<a hidden class="anchor" aria-hidden="true" href="#tools-and-technologies">#</a></h2>
-<ul>
-<li>VHDL</li>
-<li>FPGA digital design</li>
-<li>Vivado simulation</li>
-<li>Clock dividers and counters</li>
-<li>Seven-segment display multiplexing</li>
-<li>Digital logic testbenches</li>
-</ul>
+<p>These figures document the main verification steps from the lab report.</p>
+<p>The CLK, counter, trigger, CLK_OUT, and ONE_SHOT signals show how the input clock becomes the audio clock.</p>
+<p><img alt="Clock divider waveforms showing the clock, counter, trigger, output clock, and one-shot signals." loading="lazy" src="/images/clock_divider.png"></p>
+<p>The target-versus-actual note-frequency graph verifies the divider calculations used for the piano notes.</p>
+<p><img alt="Chart comparing target and actual piano note frequencies." loading="lazy" src="/images/note_verification.png"></p>
+<p>The Vivado waveform shows switch_in cycling through C to B, modifier changes, reset behavior, and rapid note switching.</p>
+<p><img alt="Vivado waveform showing note-switching testbench signals." loading="lazy" src="/images/waveform.png"></p>
+<h2 id="conclusion--final-notes">Conclusion &amp; Final Notes<a hidden class="anchor" aria-hidden="true" href="#conclusion--final-notes">#</a></h2>
+<p>It is a pretty fun and hands on project I would recommend to anobody interested in learning FPGA and hardware description languages. What I like the most about this project is the final physical result, just being able to play and hear the notes is super satisfying.</p>
 <p>📄 <a href="/papers/DigitalElectronics.pdf">Read the report</a></p>
 
 

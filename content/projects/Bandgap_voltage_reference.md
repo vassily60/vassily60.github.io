@@ -1,21 +1,18 @@
 ---
-title: "BiCMOS Bandgap Voltage Reference"
-description: "Designing and characterizing a temperature-stable 1.2 V reference in a 130-nm CMOS process."
+title: "CMOS Bandgap Voltage Reference"
+description: "Designing and characterizing a temperature stable 1.2 V reference."
 weight: 20
 cover:
-  image: "/images/bandgap.png"
-  alt: "Pixel array image used as a temporary cover for the bandgap reference project"
+  image: "/images/bandgaap.webp"
   caption: "Simple Bandgap Circuit Diagram"
   relative: true
 ---
 
 <!-- **July 2026 - August 2026**   -->
 
-_Cadence Virtuoso · Spectre · 130-nm CMOS PDK_
-
 ## Project Overview
 
-I designed a transistor-level 1.2 V BiCMOS bandgap voltage reference that generates a stable voltage across temperature and process variations. The project focused on analog circuit design, simulation, and physical-layout verification.
+I designed a transistor-level 1.2 V bandgap voltage reference that generates a stable voltage across temperature and process variations. In general, it is super important for a circuit to have a stable reference voltage otherwise some components might behave in the wrong way. When I say stable, I mean that the voltage should not change, or change very minimally, with temperature and process variations. So I designed a bandgap reference that uses the opposing temperature dependencies of two voltage components to produce a stable output.
 
 ## What I Designed
 
@@ -28,23 +25,14 @@ I designed a transistor-level 1.2 V BiCMOS bandgap voltage reference that genera
 I evaluated the reference with Cadence Spectre across the conditions that matter for an integrated analog circuit:
 
 - Temperature sweeps
-- Power-supply rejection ratio (PSRR)
+- Power supply rejection ratio (PSRR)
 - Noise and power consumption
 - Process, voltage, and temperature (PVT) corners
 - Monte Carlo mismatch analysis
 
 ## Physical Verification
 
-I verified the physical IC layout with design-rule checking (DRC), layout-versus-schematic (LVS) verification, and parasitic extraction. I then compared pre-layout and post-layout performance to understand the impact of physical implementation on the circuit.
-
-## Tools and Technologies
-
-- Cadence Virtuoso
-- Cadence Spectre
-- BiCMOS circuit design
-- PTAT/CTAT temperature compensation
-- 130-nm CMOS PDK
-- DRC, LVS, and parasitic extraction
+I verified the physical IC layout was DRC and LVS clean. Parasitic extraction was also performed to compare pre-layout and post-layout performance to understand the impact of physical implementation on the circuit.
 
 <!-- ## Project Evidence
 

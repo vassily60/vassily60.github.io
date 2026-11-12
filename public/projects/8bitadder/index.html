@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>8-bit Ripple-Carry Adder | Vassily Lombard</title>
+<meta name="keywords" content="">
+<meta name="description" content="A transistor-level 8-bit signed ripple-carry adder with addition, subtraction, and overflow detection.">
+<meta name="author" content="Vassily Lombard">
+<link rel="canonical" href="http://localhost:1313/projects/8bitadder/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.26479bbddbba60ebb9b48e8e9c1d80f64c060e4c538486de707e5f08f7548af0.css" integrity="sha256-Jkebvdu6YOu5tI6OnB2A9kwGDkxThIbecH5fCPdUivA=" rel="stylesheet">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/projects/8bitadder/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [["\\(", "\\)"]],
+      displayMath: [["$$", "$$"]],
+      processEscapes: true,
+    },
+    svg: { fontCache: "global" },
+  };
+</script>
+<script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"
+  defer
+></script>
+<script>
+  document.documentElement.classList.add("scroll-reveal-ready");
+
+  window.addEventListener("DOMContentLoaded", () => {
+    const revealItems = document.querySelectorAll(
+      ".home-hero, .home-section, .project-card, .post-entry, .project-entry, .experience-media, .experience-card, .post-single, .page-header",
+    );
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      revealItems.forEach((item) => item.classList.add("is-visible"));
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          entry.target.classList.toggle("is-visible", entry.isIntersecting);
+        });
+      },
+      { threshold: 0.08, rootMargin: "-4% 0px -8%" },
+    );
+
+    revealItems.forEach((item, index) => {
+      item.classList.add("scroll-reveal");
+      item.style.setProperty(
+        "--reveal-delay",
+        `${Math.min(index * 50, 250)}ms`,
+      );
+      observer.observe(item);
+    });
+  });
+</script>
+
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Vassily Lombard (Alt + H)">Vassily Lombard</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/posts/" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/projects/" title="Projects">
+                    <span>Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/readings/" title="Readings">
+                    <span>Readings</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/experience/" title="Experiences">
+                    <span>Experiences</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/projects/">Projects</a></div>
+    <h1 class="post-title entry-hint-parent">
+      8-bit Ripple-Carry Adder
+    </h1>
+    <div class="post-description">
+      A transistor-level 8-bit signed ripple-carry adder with addition, subtraction, and overflow detection.
+    </div>
+    <div class="post-meta"><span>Vassily Lombard</span>
+
+</div>
+  </header> 
+<figure class="entry-cover">
+        <img loading="eager" src="http://localhost:1313/images/adder/8bitadderlayout.png" alt="">
+        
+</figure><div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#project-overview" aria-label="Project Overview">Project Overview</a></li>
+                <li>
+                    <a href="#circuit-design" aria-label="Circuit Design">Circuit Design</a></li>
+                <li>
+                    <a href="#verification-and-critical-path-timing" aria-label="Verification and Critical Path Timing">Verification and Critical Path Timing</a></li>
+                <li>
+                    <a href="#conclusion--final-notes" aria-label="Conclusion &amp; Final Notes">Conclusion &amp; Final Notes</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><br>
+<h2 id="project-overview">Project Overview<a hidden class="anchor" aria-hidden="true" href="#project-overview">#</a></h2>
+<p>The goal of this project is to design and layout a ripple carry adder for two 8 bit signed values. Addition and subtraction are supported, and overflow is detected. It is part of a bigger project, where I want to design an entire CPU core. For this reason, the bit pitch (size needed for one bit) is crucial as it will be used on other components such as the shifter.</p>
+<p>For this specific design the critical path is determined by the carry propagation and it is essential to minimize it, by sizing the transistors correctly. The sizes are shown on the schematics and layouts below.</p>
+<br>
+<h2 id="circuit-design">Circuit Design<a hidden class="anchor" aria-hidden="true" href="#circuit-design">#</a></h2>
+<p>The overall design is made of 8 full adder stages, each of which output a sum and a carry. It supports two inputs, A and B, as well as a substract bit to choose from addition or substraction. I used xor gates to implement the substraction as it it basically take the 2&rsquo;s complement of the B input and add it to A (with +1 from the first carry in). The overflow is detected by xor&rsquo;ing the carry in and carry out of the most significant bit.</p>
+<p>The overall design is shown below !</p>
+<p><img alt="Schematic of the complete 8-bit ripple-carry adder." loading="lazy" src="/images/adder/8bitadder.png"></p>
+<p>Let&rsquo;s first build the XOR gate. We set the bit pitch to 2.91um for ease of routing and avoid DRC violations. It will also be easier for the full adder as it more complex and need more space for routing.</p>
+<p><img alt="Transistor-level schematic of the XOR gate." loading="lazy" src="/images/adder/xor.png"></p>
+<p><img alt="Physical layout of the XOR gate with a 2.91 u  bit pitch." loading="lazy" src="/images/adder/xorlayout.png"></p>
+<p>I then built a full adder from transistor-level logic. It is a pretty standard way of doing a full adder. Transistors are sized standardly using a minimum transistor width of 150 nm. Big PMOS transistors were also fingered to make them more compact and reduce the capacitance. Diffusion sharing was used as much as possible to reduce the area.</p>
+<p><img alt="Transistor-level schematic of a one-bit full adder." loading="lazy" src="/images/adder/fulladder.png"></p>
+<p>The physical layout of one full-adder stage is shown below.</p>
+<p><img alt="Physical layout of the one-bit full adder." loading="lazy" src="/images/adder/fulladderlayout.png"></p>
+<p>Finally, putting everything together I got the following layout. We can clearly see the bit pitch matching for the xor and full adder which facilitates the routing. As a side note, I strictly used M1 and M2 metals for the xor and full adder layout and kept M3 for the overall routing.</p>
+<p><img alt="Physical layout of the complete 8-bit ripple-carry adder." loading="lazy" src="/images/adder/8bitadderlayout.png"></p>
+<br>
+<h2 id="verification-and-critical-path-timing">Verification and Critical Path Timing<a hidden class="anchor" aria-hidden="true" href="#verification-and-critical-path-timing">#</a></h2>
+<p>I then verified the design with a pulse voltage source and text-file test vectors. For the signed 8-bit range of -128 to 127, I used <strong>-1 + 1 = 0</strong> as an example and traced both the input and output signals in simulation.</p>
+<p>Input A is initially 11111111, the 8-bit two&rsquo;s-complement representation of -1. At 5 ns its sign bit changes, making A equal to 127.</p>
+<p><img alt="Simulation input waveforms for A, initially set to negative one before its sign bit changes." loading="lazy" src="/images/adder/signednegativeone.png"></p>
+<p>B changes from 0 to 1 at 4 ns while subtraction remains disabled, setting up the -1 + 1 test.</p>
+<p><img alt="Simulation input waveforms for B, changing from zero to positive one at 4 ns." loading="lazy" src="/images/adder/signedpositiveone.png"></p>
+<p>The output trace shows the sum bits responding in sequence as the carry propagates from the least significant bit toward the most significant bit. I measured delay from the 50% voltage crossings: B0 at 4.01 ns and Sum7 at 4.38 ns. This gives a critical-path delay of <strong>370 ps</strong>.</p>
+<p>The sum settles to 00000000. Sum7 is the last sum bit to cross the 50% threshold after the input transition, giving a 370 ps critical path delay. When A changes to 127 at 5 ns while B stays at 1, overflow asserts because the result is out of range.</p>
+<p><img alt="Simulation output waveforms showing sum bits responding in sequence, along with the overflow signal." loading="lazy" src="/images/adder/resultoneminusone.png"></p>
+<br>
+<h2 id="conclusion--final-notes">Conclusion &amp; Final Notes<a hidden class="anchor" aria-hidden="true" href="#conclusion--final-notes">#</a></h2>
+<p>And this is the end of this post ! There are definitely ways of improving this design but the main goal was to have a working adder. The learning curve of learning virtuoso is steep but this kind of project is really helpful. Hope this post helps if you are designing your own adder !</p>
+<p>📄 <a href="/papers/PS6%20VLSI%20.pdf">Read the full project report (PDF)</a></p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">Vassily Lombard</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>
