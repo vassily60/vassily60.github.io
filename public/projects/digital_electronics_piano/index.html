@@ -214,15 +214,22 @@
                 <li>
                     <a href="#project-graphs--figures" aria-label="Project Graphs &amp; Figures">Project Graphs &amp; Figures</a></li>
                 <li>
-                    <a href="#conclusion--final-notes" aria-label="Conclusion &amp; Final Notes">Conclusion &amp; Final Notes</a>
+                    <a href="#conclusion--final-notes" aria-label="Conclusion &amp; Final Notes">Conclusion &amp; Final Notes</a><ul>
+                        
+                <li>
+                    <a href="#resources" aria-label="Resources">Resources</a>
                 </li>
+            </ul>
+            </li>
             </ul>
         </div>
     </details>
 </div>
 
-  <div class="post-content"><h2 id="project-goal">Project Goal<a hidden class="anchor" aria-hidden="true" href="#project-goal">#</a></h2>
+  <div class="post-content"><br>
+<h2 id="project-goal">Project Goal<a hidden class="anchor" aria-hidden="true" href="#project-goal">#</a></h2>
 <p>I designed a digital piano on an FPGA that turns switch and push-button inputs into musical notes. The system decodes the selected note, generates the correct tone using a clock divider, and displays the note and octave on a four-digit seven-segment display.</p>
+<br>
 <h2 id="how-it-works">How It Works<a hidden class="anchor" aria-hidden="true" href="#how-it-works">#</a></h2>
 <ul>
 <li>Encoded the seven natural notes using one-hot switch inputs.</li>
@@ -232,9 +239,11 @@
 <li>Scanned the seven-segment display to show the note letter, octave, and sharp indicator.</li>
 <li>Added reset and silence behavior for invalid or empty switch combinations.</li>
 </ul>
+<br>
 <h2 id="verification">Verification<a hidden class="anchor" aria-hidden="true" href="#verification">#</a></h2>
 <p>I created VHDL testbench stimulus to exercise the complete range of inputs, including all seven notes, sharps, flats, octave changes, silence, rapid switching, and non-sequential note changes. The simulations confirmed that the input signals and display outputs responded to the programmed test cases.</p>
 <p>The design also revealed a practical limitation of behavioral simulation: the FPGA&rsquo;s MMCM clock manager requires hardware timing to lock, so some downstream outputs remain uninitialized in simulation even while the input stimulus is applied correctly.</p>
+<br>
 <h2 id="project-graphs--figures">Project Graphs &amp; Figures<a hidden class="anchor" aria-hidden="true" href="#project-graphs--figures">#</a></h2>
 <p>These figures document the main verification steps from the lab report.</p>
 <p>The CLK, counter, trigger, CLK_OUT, and ONE_SHOT signals show how the input clock becomes the audio clock.</p>
@@ -243,8 +252,11 @@
 <p><img alt="Chart comparing target and actual piano note frequencies." loading="lazy" src="/images/note_verification.png"></p>
 <p>The Vivado waveform shows switch_in cycling through C to B, modifier changes, reset behavior, and rapid note switching.</p>
 <p><img alt="Vivado waveform showing note-switching testbench signals." loading="lazy" src="/images/waveform.png"></p>
+<br>
 <h2 id="conclusion--final-notes">Conclusion &amp; Final Notes<a hidden class="anchor" aria-hidden="true" href="#conclusion--final-notes">#</a></h2>
 <p>It is a pretty fun and hands on project I would recommend to anobody interested in learning FPGA and hardware description languages. What I like the most about this project is the final physical result, just being able to play and hear the notes is super satisfying.</p>
+<br>
+<h3 id="resources">Resources<a hidden class="anchor" aria-hidden="true" href="#resources">#</a></h3>
 <p>📄 <a href="/papers/DigitalElectronics.pdf">Read the report</a></p>
 
 

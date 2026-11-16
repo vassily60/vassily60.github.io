@@ -8,17 +8,20 @@ cover:
   relative: true
 ---
 
-<!-- **July 2026 - August 2026**   -->
+<br>
 
 ## Project Overview
 
 I designed a transistor-level 1.2 V bandgap voltage reference that generates a stable voltage across temperature and process variations. In general, it is super important for a circuit to have a stable reference voltage otherwise some components might behave in the wrong way. When I say stable, I mean that the voltage should not change, or change very minimally, with temperature and process variations. So I designed a bandgap reference that uses the opposing temperature dependencies of two voltage components to produce a stable output.
+
+<br>
 
 ## What I Designed
 
 - Built a temperature-compensated reference using PTAT and CTAT voltage components.
 - Designed the bipolar devices, current mirrors, and feedback circuitry in Cadence Virtuoso.
 - Combined the opposing temperature dependencies to produce a stable 1.2 V output.
+  <br>
 
 ## Characterization
 
@@ -29,6 +32,8 @@ I evaluated the reference with Cadence Spectre across the conditions that matter
 - Noise and power consumption
 - Process, voltage, and temperature (PVT) corners
 - Monte Carlo mismatch analysis
+
+<br>
 
 ## Physical Verification
 

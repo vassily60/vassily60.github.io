@@ -52,7 +52,7 @@ The localization errors were large in absolute terms (around 4000–5000 meters 
 
 <br>
 
-### What I Take Away
+## Conclusion & Final Notes
 
 This project taught me that negative results are results too. I went in expecting a clean speed–accuracy tradeoff between SIFT and ORB, and instead found that ORB was simply not geometrically capable of handling this task — a much more interesting finding in its own way. If I were to do this again, I would test on a much larger image sample (the full 768 images rather than just 5), explore preprocessing steps like contrast enhancement to help with cross-view matching, and investigate whether tuning ORB's scale pyramid parameters could make it viable. The pipeline works, but there is a lot of room to make it work better — and now I know exactly where to look.
 

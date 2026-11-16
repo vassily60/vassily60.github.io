@@ -202,7 +202,7 @@
   <article class="post-entry project-entry">
       
 <figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/photopixel.jpg" alt="Image of an array of pixels">
+        <img loading="lazy" src="http://localhost:1313/images/photopixel.jpg" alt="">
 </figure>
     <header class="entry-header">
       <h2 class="entry-hint-parent">
@@ -212,8 +212,9 @@
     
     <div class="entry-content">
       <p>
-        Work in progress @ STMicroelectronics !
-
+        A note on project details Some of this project is covered by a non-disclosure agreement, so I cannot share the detailed design or implementation. I can, however, explain the motivation and the challenge I set out to explore.
+Why shutter type matters A camera sensor turns light into an image, but it does not always capture every part of a moving scene at exactly the same time. With a rolling shutter, the sensor captures or reads the image one row at a time. When something moves quickly, different rows can represent different moments. The spinning fan below shows how that timing can distort the shape of moving objects.
+...
       </p>
     </div>
      
@@ -229,6 +230,9 @@
 
   <article class="post-entry project-entry">
       
+<figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/adder/8bitadderlayout.png" alt="">
+</figure>
     <header class="entry-header">
       <h2 class="entry-hint-parent">
         8-bit Ripple-Carry Adder 
@@ -237,8 +241,8 @@
     
     <div class="entry-content">
       <p>
-        Project Overview Our group designed a static ripple-carry adder for two 8-bit signed values. Building an adder from reusable full-adder stages gave us a practical way to explore digital arithmetic at the transistor level and see how carry propagation affects circuit delay.
-Circuit Design We first built an XOR gate, then designed its physical layout with a bit pitch of 2.91 um to simplify routing and avoid design-rule violations.
+        
+Project Overview The goal of this project is to design and layout a ripple carry adder for two 8 bit signed values. Addition and subtraction are supported, and overflow is detected. It is part of a bigger project, where I want to design an entire CPU core. For this reason, the bit pitch (size needed for one bit) is crucial as it will be used on other components such as the shifter.
 ...
       </p>
     </div>
@@ -256,19 +260,19 @@ Circuit Design We first built an XOR gate, then designed its physical layout wit
   <article class="post-entry project-entry">
       
 <figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/bandgap.png" alt="Pixel array image used as a temporary cover for the bandgap reference project">
+        <img loading="lazy" src="http://localhost:1313/images/processorimage.jpg" alt="">
 </figure>
     <header class="entry-header">
       <h2 class="entry-hint-parent">
-        BiCMOS Bandgap Voltage Reference 
+        A Simple Processor in Verilog 
       </h2>
     </header>
     
     <div class="entry-content">
       <p>
-        Cadence Virtuoso · Spectre · 130-nm CMOS PDK
-Project Overview I designed a transistor-level 1.2 V BiCMOS bandgap voltage reference that generates a stable voltage across temperature and process variations. The project focused on analog circuit design, simulation, and physical-layout verification.
-What I Designed Built a temperature-compensated reference using PTAT and CTAT voltage components. Designed the bipolar devices, current mirrors, and feedback circuitry in Cadence Virtuoso. Combined the opposing temperature dependencies to produce a stable 1.2 V output. Characterization I evaluated the reference with Cadence Spectre across the conditions that matter for an integrated analog circuit:
+        
+A tiny processor, one step at a time A processor can seem like a mysterious box that turns instructions into results. For a small project, we can just consider some parts of it, and break it into a few simple pieces.
+I wrote a small processor in Verilog. It has four 8 bit registers, a shared 8 bit bus, and arithmetic logic for adding or subtracting. Inside the code, the processor is more like a little control room where each piece does its work one step at a time.
 ...
       </p>
     </div>
@@ -277,7 +281,36 @@ What I Designed Built a temperature-compensated reference using PTAT and CTAT vo
     
     <a
       class="entry-link"
-      aria-label="post link to BiCMOS Bandgap Voltage Reference"
+      aria-label="post link to A Simple Processor in Verilog"
+      href="http://localhost:1313/projects/fsmprocessor/"
+    ></a>
+  </article>
+      
+
+  <article class="post-entry project-entry">
+      
+<figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/bandgaap.webp" alt="Simple Bandgap Circuit Diagram">
+</figure>
+    <header class="entry-header">
+      <h2 class="entry-hint-parent">
+        CMOS Bandgap Voltage Reference 
+      </h2>
+    </header>
+    
+    <div class="entry-content">
+      <p>
+        
+Project Overview I designed a transistor-level 1.2 V bandgap voltage reference that generates a stable voltage across temperature and process variations. In general, it is super important for a circuit to have a stable reference voltage otherwise some components might behave in the wrong way. When I say stable, I mean that the voltage should not change, or change very minimally, with temperature and process variations. So I designed a bandgap reference that uses the opposing temperature dependencies of two voltage components to produce a stable output.
+...
+      </p>
+    </div>
+     
+    <footer class="entry-footer"><span>Vassily Lombard</span></footer>
+    
+    <a
+      class="entry-link"
+      aria-label="post link to CMOS Bandgap Voltage Reference"
       href="http://localhost:1313/projects/bandgap_voltage_reference/"
     ></a>
   </article>
@@ -286,7 +319,7 @@ What I Designed Built a temperature-compensated reference using PTAT and CTAT vo
   <article class="post-entry project-entry">
       
 <figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/fpga.jpg" alt="Temporary digital logic diagram used as the FPGA piano project cover">
+        <img loading="lazy" src="http://localhost:1313/images/fpga.jpg" alt="">
 </figure>
     <header class="entry-header">
       <h2 class="entry-hint-parent">
@@ -296,7 +329,7 @@ What I Designed Built a temperature-compensated reference using PTAT and CTAT vo
     
     <div class="entry-content">
       <p>
-        VHDL · FPGA design · Vivado simulation · Seven-segment display
+        
 Project Goal I designed a digital piano on an FPGA that turns switch and push-button inputs into musical notes. The system decodes the selected note, generates the correct tone using a clock divider, and displays the note and octave on a four-digit seven-segment display.
 How It Works Encoded the seven natural notes using one-hot switch inputs. Used push-buttons to select flats, sharps, and the upper octave. Converted the selected note into a divider value based on the desired audio frequency. Generated the speaker clock with a counter and toggle-based clock divider. Scanned the seven-segment display to show the note letter, octave, and sharp indicator. Added reset and silence behavior for invalid or empty switch combinations. Verification I created VHDL testbench stimulus to exercise the complete range of inputs, including all seven notes, sharps, flats, octave changes, silence, rapid switching, and non-sequential note changes. The simulations confirmed that the input signals and display outputs responded to the programmed test cases.
 ...
@@ -345,7 +378,7 @@ Context &amp; Motivation I have always been fascinated by the idea that a machin
   <article class="post-entry project-entry">
       
 <figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/robotsign.png" alt="My robot ready to recognize sign language">
+        <img loading="lazy" src="http://localhost:1313/images/robotsign.png" alt="">
 </figure>
     <header class="entry-header">
       <h2 class="entry-hint-parent">
