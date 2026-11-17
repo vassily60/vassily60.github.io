@@ -1,0 +1,39 @@
+<a class="site-back-link" href="/" aria-label="Go back to the previous page" hidden>
+  <span aria-hidden="true">&larr;</span>
+  <span>Back</span>
+</a>
+<script>
+  (() => {
+    const backLink = document.querySelector(".site-back-link");
+    if (!backLink) return;
+
+    const currentUrl = new URL(window.location.href);
+    const referrerUrl = document.referrer
+      ? new URL(document.referrer, currentUrl)
+      : null;
+
+    if (referrerUrl && referrerUrl.origin === currentUrl.origin) {
+      backLink.href = referrerUrl.href;
+    } else {
+      const basePath = new URL("{{ .Site.Home.RelPermalink }}", currentUrl).pathname;
+      const relativePath = currentUrl.pathname.startsWith(basePath)
+        ? currentUrl.pathname.slice(basePath.length)
+        : currentUrl.pathname.replace(/^\/+/, "");
+      if (!relativePath) {
+        backLink.hidden = true;
+        return;
+      }
+
+      const pathParts = relativePath.split("/").filter(Boolean);
+      if (pathParts[pathParts.length - 1] === "index.html") pathParts.pop();
+      pathParts.pop();
+
+      backLink.href = new URL(
+        `${basePath}${pathParts.length ? `${pathParts.join("/")}/` : ""}`,
+        currentUrl.origin,
+      ).href;
+    }
+
+    backLink.hidden = false;
+  })();
+</script>

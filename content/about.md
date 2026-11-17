@@ -9,7 +9,7 @@ summary: "A bit about who I am."
 Hi, I'm Vassily, a rising senior at Columbia University studying Computer Engineering.
 
 <figure class="about-inline-image">
-	<img src="/images/id_1.jpeg" alt="" loading="lazy" />
+	<img src="/images/almamatter.jpeg" alt="" loading="lazy" />
 </figure>
 
 This past summer I worked at STMicroelectronics on pixel design and characterization for optical sensors. I previously worked at a startup in Paris on LLMs architecture design and also in a biomedical lab at Columbia University on a project involving ultrasound localization microscopy (ULM).

@@ -10,7 +10,7 @@
 <meta name="description" content="A blog about science, curiosity, and the ideas that matter.">
 <meta name="author" content="Vassily Lombard">
 <link rel="canonical" href="http://localhost:1313/tags/communication/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.26479bbddbba60ebb9b48e8e9c1d80f64c060e4c538486de707e5f08f7548af0.css" integrity="sha256-Jkebvdu6YOu5tI6OnB2A9kwGDkxThIbecH5fCPdUivA=" rel="stylesheet">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.1f3ac58d2d33789afa5a3e0d32421104f5fe1c5e65837073963ee5327633ad2b.css" integrity="sha256-HzrFjS0zeJr6Wj4NMkIRBPX&#43;HF5lg3Bzlj7lMnYzrSs=" rel="stylesheet">
 <link rel="icon" href="http://localhost:1313/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
@@ -231,7 +231,46 @@ But why analog communication and what does “analog” mean in this context ? Y
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
         <path d="M12 6H0l6-6z" />
     </svg>
+</a><a class="site-back-link" href="/" aria-label="Go back to the previous page" hidden>
+  <span aria-hidden="true">&larr;</span>
+  <span>Back</span>
 </a>
+<script>
+  (() => {
+    const backLink = document.querySelector(".site-back-link");
+    if (!backLink) return;
+
+    const currentUrl = new URL(window.location.href);
+    const referrerUrl = document.referrer
+      ? new URL(document.referrer, currentUrl)
+      : null;
+
+    if (referrerUrl && referrerUrl.origin === currentUrl.origin) {
+      backLink.href = referrerUrl.href;
+    } else {
+      const basePath = new URL("\/", currentUrl).pathname;
+      const relativePath = currentUrl.pathname.startsWith(basePath)
+        ? currentUrl.pathname.slice(basePath.length)
+        : currentUrl.pathname.replace(/^\/+/, "");
+      if (!relativePath) {
+        backLink.hidden = true;
+        return;
+      }
+
+      const pathParts = relativePath.split("/").filter(Boolean);
+      if (pathParts[pathParts.length - 1] === "index.html") pathParts.pop();
+      pathParts.pop();
+
+      backLink.href = new URL(
+        `${basePath}${pathParts.length ? `${pathParts.join("/")}/` : ""}`,
+        currentUrl.origin,
+      ).href;
+    }
+
+    backLink.hidden = false;
+  })();
+</script>
+
 
 <script>
     let menu = document.getElementById('menu');
