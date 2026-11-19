@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Readings on Vassily Lombard</title>
+    <link>https://vassily60.github.io/readings/</link>
+    <description>Recent content in Readings on Vassily Lombard</description>
+    <generator>Hugo -- 0.154.2</generator>
+    <language>en-us</language>
+    <atom:link href="https://vassily60.github.io/readings/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Meditations on First Philosophy - René Descartes</title>
+      <link>https://vassily60.github.io/readings/descartes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://vassily60.github.io/readings/descartes/</guid>
+      <description>René Descartes&amp;#39; foundational work in philosophy</description>
+    </item>
+    <item>
+      <title>Nausea - Jean-Paul Sartre</title>
+      <link>https://vassily60.github.io/readings/nausea/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://vassily60.github.io/readings/nausea/</guid>
+      <description>Jean-Paul Sartre&amp;#39;s first and most famous novel</description>
+    </item>
+    <item>
+      <title>SPQR - Mary Beard</title>
+      <link>https://vassily60.github.io/readings/spqr/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://vassily60.github.io/readings/spqr/</guid>
+      <description>Everything you need to know about Rome</description>
+    </item>
+    <item>
+      <title>The Red and the Black - Stendhal</title>
+      <link>https://vassily60.github.io/readings/lerougeetnoir/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://vassily60.github.io/readings/lerougeetnoir/</guid>
+      <description>Stendhal&amp;#39;s novel about social ambition in the post Napoleonic era</description>
+    </item>
+  </channel>
+</rss>

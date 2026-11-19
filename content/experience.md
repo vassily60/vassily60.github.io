@@ -86,6 +86,24 @@ title: "Experiences"
       </details>
     </article>
     <article class="experience-item experience-item-left">
+      <div class="experience-marker" aria-hidden="true">2023</div>
+      <div class="experience-media">
+        <img src="/images/earlham.jpg" alt="Earlham College campus" loading="lazy" />
+      </div>
+      <details class="experience-card" open>
+        <summary>
+          <span class="experience-period">Aug. 2023 - May 2025</span>
+          <span class="experience-role">Calculus II Teaching Assistant @ Earlham College</span>
+          <span class="experience-toggle" aria-hidden="true">+</span>
+        </summary>
+        <div class="experience-card-body">
+          <ul>
+            <li>Served as a teaching assistant for Calculus II for Professor Naomi Boulware.</li>
+          </ul>
+        </div>
+      </details>
+    </article>
+    <article class="experience-item experience-item-left">
       <div class="experience-marker" aria-hidden="true">2024</div>
       <div class="experience-media">
         <img src="/images/nationalgeographic.png" alt="Computer vision research imagery" loading="lazy" />

@@ -1,3 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Vassily Lombard — Science &amp; Curiosity</title><link>https://vassily60.github.io/posts/</link><description>Recent content in Posts on Vassily Lombard — Science &amp; Curiosity</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 20 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://vassily60.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Welcome to My Science Blog</title><link>https://vassily60.github.io/posts/welcome/</link><pubDate>Wed, 20 May 2026 00:00:00 +0000</pubDate><guid>https://vassily60.github.io/posts/welcome/</guid><description>This is the first post. Replace this with a real introduction.
-Science is a way of thinking, not just a collection of facts. I started this blog to force myself to write clearly about ideas I find fascinating — because writing is thinking.
-Expect posts on physics, biology, mathematics, and anything else that catches my eye.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on Vassily Lombard</title>
+    <link>https://vassily60.github.io/posts/</link>
+    <description>Recent content in Posts on Vassily Lombard</description>
+    <generator>Hugo -- 0.154.2</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 21 May 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://vassily60.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Why Analog Communication is Still Relevant in a Digital World</title>
+      <link>https://vassily60.github.io/posts/first_post/</link>
+      <pubDate>Thu, 21 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://vassily60.github.io/posts/first_post/</guid>
+      <description>Why is analog communication still releventin a world  where almost everything is digital? Let&amp;#39;s explore how analog communication works and why it might come back in the future.</description>
+    </item>
+  </channel>
+</rss>

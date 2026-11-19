@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Projects | Vassily Lombard</title>
+<meta name="keywords" content="">
+<meta name="description" content="Below you can find a selection of personal projects I enjoyed working on. Hope you have fun reading about them and don&rsquo;t hesitate to reach out if you have any questions !">
+<meta name="author" content="Vassily Lombard">
+<link rel="canonical" href="https://vassily60.github.io/projects/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.1f3ac58d2d33789afa5a3e0d32421104f5fe1c5e65837073963ee5327633ad2b.css" integrity="sha256-HzrFjS0zeJr6Wj4NMkIRBPX&#43;HF5lg3Bzlj7lMnYzrSs=" rel="stylesheet">
+<link rel="icon" href="https://vassily60.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://vassily60.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://vassily60.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://vassily60.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://vassily60.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="https://vassily60.github.io/projects/index.xml" title="rss">
+<link rel="alternate" hreflang="en" href="https://vassily60.github.io/projects/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [["\\(", "\\)"]],
+      displayMath: [["$$", "$$"]],
+      processEscapes: true,
+    },
+    svg: { fontCache: "global" },
+  };
+</script>
+<script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"
+  defer
+></script>
+<script>
+  document.documentElement.classList.add("scroll-reveal-ready");
+
+  window.addEventListener("DOMContentLoaded", () => {
+    const revealItems = document.querySelectorAll(
+      ".home-hero, .home-section, .project-card, .post-entry, .project-entry, .experience-media, .experience-card, .post-single, .page-header",
+    );
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      revealItems.forEach((item) => item.classList.add("is-visible"));
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          entry.target.classList.toggle("is-visible", entry.isIntersecting);
+        });
+      },
+      { threshold: 0.08, rootMargin: "-4% 0px -8%" },
+    );
+
+    revealItems.forEach((item, index) => {
+      item.classList.add("scroll-reveal");
+      item.style.setProperty(
+        "--reveal-delay",
+        `${Math.min(index * 50, 250)}ms`,
+      );
+      observer.observe(item);
+    });
+  });
+</script>
+<meta property="og:url" content="https://vassily60.github.io/projects/">
+  <meta property="og:site_name" content="Vassily Lombard">
+  <meta property="og:title" content="Projects">
+  <meta property="og:description" content="Below you can find a selection of personal projects I enjoyed working on. Hope you have fun reading about them and don’t hesitate to reach out if you have any questions !">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Projects">
+<meta name="twitter:description" content="A blog about science, curiosity, and the ideas that matter.">
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position":  1 ,
+        "name": "\"Projects\"",
+        "item": "\"https://vassily60.github.io/projects/\""
+      }
+    ]
+  }
+</script>
+</head>
+<body class="list" id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://vassily60.github.io/" accesskey="h" title="Vassily Lombard (Alt + H)">Vassily Lombard</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://vassily60.github.io/posts/" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://vassily60.github.io/projects/" title="Projects">
+                    <span class="active">Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://vassily60.github.io/readings/" title="Readings">
+                    <span>Readings</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://vassily60.github.io/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://vassily60.github.io/experience/" title="Experiences">
+                    <span>Experiences</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://vassily60.github.io/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">  
+<header class="page-header">
+  <div class="breadcrumbs"><a href="https://vassily60.github.io/">Home</a></div>
+  <h1>
+    Projects 
+  </h1>
+  
+</header>
+ 
+<div class="post-content">
+   <p>Below you can find a selection of personal projects I enjoyed working on. Hope you have fun reading about them and don&rsquo;t hesitate to reach out if you have any questions !</p>
+
+
+</div>
+       
+<div class="projects-list-grid">
+       
+
+  <article class="post-entry project-entry">
+      
+<figure class="entry-cover">
+        <img loading="lazy" src="https://vassily60.github.io/images/photopixel.jpg" alt="">
+</figure>
+    <header class="entry-header">
+      <h2 class="entry-hint-parent">
+        Design and Characterization of a Pixel Readout Chip 
+      </h2>
+    </header>
+    
+    <div class="entry-content">
+      <p>
+        A note on project details This project took part during my internship at STMicroelectronics and I’m so grateful they gave me the opportunity to learn and explore mixed signal IC design and specifically pixel readout architectures. Some of the work I did is under a non disclosure agreement which prevents me from going into the details of the design, but I still want to share my experience and motivation for this project.
+...
+      </p>
+    </div>
+     
+    <footer class="entry-footer"><span>Vassily Lombard</span></footer>
+    
+    <a
+      class="entry-link"
+      aria-label="post link to Design and Characterization of a Pixel Readout Chip"
+      href="https://vassily60.github.io/projects/pixel_readout/"
+    ></a>
+  </article>
+      
+
+  <article class="post-entry project-entry">
+      
+<figure class="entry-cover">
+        <img loading="lazy" src="https://vassily60.github.io/images/adder/8bitadderlayout.png" alt="">
+</figure>
+    <header class="entry-header">
+      <h2 class="entry-hint-parent">
+        8-bit Ripple-Carry Adder 
+      </h2>
+    </header>
+    
+    <div class="entry-content">
+      <p>
+        
+Project Overview The goal of this project is to design and layout a ripple carry adder for two 8 bit signed values. Addition and subtraction are supported, and overflow is detected. It is part of a bigger project, where I want to design an entire CPU core. For this reason, the bit pitch (size needed for one bit) is crucial as it will be used on other components such as the shifter.
+...
+      </p>
+    </div>
+     
+    <footer class="entry-footer"><span>Vassily Lombard</span></footer>
+    
+    <a
+      class="entry-link"
+      aria-label="post link to 8-bit Ripple-Carry Adder"
+      href="https://vassily60.github.io/projects/8bitadder/"
+    ></a>
+  </article>
+      
+
+  <article class="post-entry project-entry">
+      
+<figure class="entry-cover">
+        <img loading="lazy" src="https://vassily60.github.io/images/processorimage.jpg" alt="">
+</figure>
+    <header class="entry-header">
+      <h2 class="entry-hint-parent">
+        A Simple Processor in Verilog 
+      </h2>
+    </header>
+    
+    <div class="entry-content">
+      <p>
+        
+A tiny processor, one step at a time A processor can seem like a mysterious box that turns instructions into results. For a small project, we can just consider some parts of it, and break it into a few simple pieces.
+I wrote a small processor in Verilog. It has four 8 bit registers, a shared 8 bit bus, and arithmetic logic for adding or subtracting. Inside the code, the processor is more like a little control room where each piece does its work one step at a time.
+...
+      </p>
+    </div>
+     
+    <footer class="entry-footer"><span>Vassily Lombard</span></footer>
+    
+    <a
+      class="entry-link"
+      aria-label="post link to A Simple Processor in Verilog"
+      href="https://vassily60.github.io/projects/fsmprocessor/"
+    ></a>
+  </article>
+      
+
+  <article class="post-entry project-entry">
+      
+<figure class="entry-cover">
+        <img loading="lazy" src="https://vassily60.github.io/images/bandgaap.webp" alt="Simple Bandgap Circuit Diagram">
+</figure>
+    <header class="entry-header">
+      <h2 class="entry-hint-parent">
+        CMOS Bandgap Voltage Reference 
+      </h2>
+    </header>
+    
+    <div class="entry-content">
+      <p>
+        
+Project Overview I designed a transistor-level 1.2 V bandgap voltage reference that generates a stable voltage across temperature and process variations. In general, it is super important for a circuit to have a stable reference voltage otherwise some components might behave in the wrong way. When I say stable, I mean that the voltage should not change, or change very minimally, with temperature and process variations. So I designed a bandgap reference that uses the opposing temperature dependencies of two voltage components to produce a stable output.
+...
+      </p>
+    </div>
+     
+    <footer class="entry-footer"><span>Vassily Lombard</span></footer>
+    
+    <a
+      class="entry-link"
+      aria-label="post link to CMOS Bandgap Voltage Reference"
+      href="https://vassily60.github.io/projects/bandgap_voltage_reference/"
+    ></a>
+  </article>
+      
+
+  <article class="post-entry project-entry">
+      
+<figure class="entry-cover">
+        <img loading="lazy" src="https://vassily60.github.io/images/fpga.jpg" alt="">
+</figure>
+    <header class="entry-header">
+      <h2 class="entry-hint-parent">
+        FPGA Digital Piano 
+      </h2>
+    </header>
+    
+    <div class="entry-content">
+      <p>
+        
+Project Goal I designed a digital piano on an FPGA that turns switch and push-button inputs into musical notes. The system decodes the selected note, generates the correct tone using a clock divider, and displays the note and octave on a four-digit seven-segment display.
+How It Works Encoded the seven natural notes using one-hot switch inputs. Used push-buttons to select flats, sharps, and the upper octave. Converted the selected note into a divider value based on the desired audio frequency. Generated the speaker clock with a counter and toggle-based clock divider. Scanned the seven-segment display to show the note letter, octave, and sharp indicator. Added reset and silence behavior for invalid or empty switch combinations. Verification I created VHDL testbench stimulus to exercise the complete range of inputs, including all seven notes, sharps, flats, octave changes, silence, rapid switching, and non-sequential note changes. The simulations confirmed that the input signals and display outputs responded to the programmed test cases.
+...
+      </p>
+    </div>
+     
+    <footer class="entry-footer"><span>Vassily Lombard</span></footer>
+    
+    <a
+      class="entry-link"
+      aria-label="post link to FPGA Digital Piano"
+      href="https://vassily60.github.io/projects/digital_electronics_piano/"
+    ></a>
+  </article>
+      
+
+  <article class="post-entry project-entry">
+      
+<figure class="entry-cover">
+        <img loading="lazy" src="https://vassily60.github.io/images/cover.jpg" alt="Drone and Satellite taking photos at different altitudes">
+</figure>
+    <header class="entry-header">
+      <h2 class="entry-hint-parent">
+        GPS-Free Drone Navigation Using Computer Vision 
+      </h2>
+    </header>
+    
+    <div class="entry-content">
+      <p>
+        View on GitHub · Read the paper
+In Summary This project builds a visual localization pipeline that estimates a drone’s GPS position by matching its camera feed against a pre-loaded satellite map — no GPS, no wireless signal required. It compares two classical feature matching algorithms, SIFT and ORB, and tests them under various degraded image conditions to find out where each one breaks down.
+Context &amp; Motivation I have always been fascinated by the idea that a machine can look at the world and figure out where it is, the same way you might recognize a neighborhood from a window seat on a plane. When I came across the problem of GPS-denied drone navigation, it felt like the perfect intersection of computer vision, real-world constraints, and genuinely high stakes applications — search and rescue, military operations, remote exploration. The question that really hooked me was not just “can we do this?” but “how robust is it really?” Most research papers test their algorithms under near-perfect conditions, but in the real world, images are blurry, noisy, and low resolution. I wanted to know exactly at what point the system stops working — and whether the choice of algorithm actually matters. ...
+      </p>
+    </div>
+     
+    <footer class="entry-footer"><span>Vassily Lombard</span></footer>
+    
+    <a
+      class="entry-link"
+      aria-label="post link to GPS-Free Drone Navigation Using Computer Vision"
+      href="https://vassily60.github.io/projects/drone_imaging/"
+    ></a>
+  </article>
+      
+
+  <article class="post-entry project-entry">
+      
+<figure class="entry-cover">
+        <img loading="lazy" src="https://vassily60.github.io/images/robotsign.png" alt="">
+</figure>
+    <header class="entry-header">
+      <h2 class="entry-hint-parent">
+        Sign Language Controlled Robot 
+      </h2>
+    </header>
+    
+    <div class="entry-content">
+      <p>
+        View on GitHub · Read the paper
+I Built a Robot That Understands Sign Language The Idea I wanted to build a robot that you could control just by showing it hand signs, no remote, no keyboard, just American Sign Language (ASL). The goal was to keep it simple, fast, and cheap enough for anyone to build.
+How It Works The system has two main parts:
+A camera mounted on a small robot (built with a Raspberry Pi) A nearby laptop that does the “thinking” The robot takes a picture of your hand sign and sends it wirelessly to the laptop. The laptop figures out which sign you made and sends the answer back. The robot then moves in that direction.
+...
+      </p>
+    </div>
+     
+    <footer class="entry-footer"><span>Vassily Lombard</span></footer>
+    
+    <a
+      class="entry-link"
+      aria-label="post link to Sign Language Controlled Robot"
+      href="https://vassily60.github.io/projects/sign_language/"
+    ></a>
+  </article>
+   
+</div>
+    
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="https://vassily60.github.io/">Vassily Lombard</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a><a class="site-back-link" href="/" aria-label="Go back to the previous page" hidden>
+  <span aria-hidden="true">&larr;</span>
+  <span>Back</span>
+</a>
+<script>
+  (() => {
+    const backLink = document.querySelector(".site-back-link");
+    if (!backLink) return;
+
+    const currentUrl = new URL(window.location.href);
+    const referrerUrl = document.referrer
+      ? new URL(document.referrer, currentUrl)
+      : null;
+
+    if (referrerUrl && referrerUrl.origin === currentUrl.origin) {
+      backLink.href = referrerUrl.href;
+    } else {
+      const basePath = new URL("\/", currentUrl).pathname;
+      const relativePath = currentUrl.pathname.startsWith(basePath)
+        ? currentUrl.pathname.slice(basePath.length)
+        : currentUrl.pathname.replace(/^\/+/, "");
+      if (!relativePath) {
+        backLink.hidden = true;
+        return;
+      }
+
+      const pathParts = relativePath.split("/").filter(Boolean);
+      if (pathParts[pathParts.length - 1] === "index.html") pathParts.pop();
+      pathParts.pop();
+
+      backLink.href = new URL(
+        `${basePath}${pathParts.length ? `${pathParts.join("/")}/` : ""}`,
+        currentUrl.origin,
+      ).href;
+    }
+
+    backLink.hidden = false;
+  })();
+</script>
+
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

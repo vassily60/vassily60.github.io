@@ -210,25 +210,53 @@
                 <li>
                     <a href="#why-shutter-type-matters" aria-label="Why shutter type matters">Why shutter type matters</a></li>
                 <li>
-                    <a href="#the-project-goal" aria-label="The project goal">The project goal</a>
+                    <a href="#type-of-pixels" aria-label="Type of Pixels">Type of Pixels</a><ul>
+                        
+                <li>
+                    <a href="#4t-pixel" aria-label="4T pixel">4T pixel</a></li>
+                <li>
+                    <a href="#global-shutter-pixel" aria-label="Global-shutter pixel">Global-shutter pixel</a>
                 </li>
+            </ul>
+            </li>
             </ul>
         </div>
     </details>
 </div>
 
   <div class="post-content"><h2 id="a-note-on-project-details">A note on project details<a hidden class="anchor" aria-hidden="true" href="#a-note-on-project-details">#</a></h2>
-<p>Some of this project is covered by a non-disclosure agreement, so I cannot share the detailed design or implementation. I can, however, explain the motivation and the challenge I set out to explore.</p>
+<p>This project took part during my internship at STMicroelectronics and I&rsquo;m so grateful they gave me the opportunity to learn and explore mixed signal IC design and specifically pixel readout architectures. Some of the work I did is under a non disclosure agreement which prevents me from going into the details of the design, but I still want to share my experience and motivation for this project.</p>
 <h2 id="why-shutter-type-matters">Why shutter type matters<a hidden class="anchor" aria-hidden="true" href="#why-shutter-type-matters">#</a></h2>
-<p>A camera sensor turns light into an image, but it does not always capture every part of a moving scene at exactly the same time. With a <strong>rolling shutter</strong>, the sensor captures or reads the image one row at a time. When something moves quickly, different rows can represent different moments. The spinning fan below shows how that timing can distort the shape of moving objects.</p>
+<p>When I came in I did not know anything about pixel and I had to learn from scratch. Enthiusastic and motivated I worked during 3 months with my supervisor on a chip that incorporates a new pixel readout architecture, that had never been tested on silicon before. The main principle is simple, combine the advantages of rolling and global shutter and avoid their drawbacks.</p>
+<p>When a camera sensor turns light into an image, it does not always capture every part of a moving scene at exactly the same time. With a <strong>rolling shutter</strong>, the sensor captures or reads the image one row at a time. When something moves quickly, different rows can represent different moments. The spinning fan below shows how that timing can distort the shape of moving objects.</p>
 <p><img alt="Comparison of a spinning fan captured with rolling and global shutters, illustrating motion distortion in the rolling-shutter image." loading="lazy" src="/images/fan.jpg"></p>
 <p>A <strong>global shutter</strong> captures the scene across the sensor at the same time. This can represent fast motion more naturally. Achieving that can require extra pixel circuitry and storage, which brings its own design trade-offs.</p>
-<p><img alt="Global-shutter pixel readout diagram showing a photodiode, floating diffusion, and storage elements." loading="lazy" src="/images/globalshutter.jpg"></p>
-<p>The four-transistor (4T) pixel diagram below is another example of the building blocks used in image sensors. It shows a pinned photodiode, a transfer gate (<code>TX</code>), a floating diffusion (<code>FD</code>), and reset and select transistors.</p>
+<p>It is exactly in this context that my project took place. Exploring a way to combine the advantages of both pixels, while keeping the architecture simple.</p>
+<h2 id="type-of-pixels">Type of Pixels<a hidden class="anchor" aria-hidden="true" href="#type-of-pixels">#</a></h2>
+<p>The two pixels have some of the same parts, but they store and read the image in different ways. The 4T pixel is simpler. The global-shutter pixel adds storage capacitors so the image can be captured across the sensor at the same time and read later.</p>
+<h3 id="4t-pixel">4T pixel<a hidden class="anchor" aria-hidden="true" href="#4t-pixel">#</a></h3>
 <p><img alt="Four-transistor pixel schematic with a pinned photodiode, transfer gate, floating diffusion, reset, and select transistors." loading="lazy" src="/images/4tpixel.png"></p>
-<h2 id="the-project-goal">The project goal<a hidden class="anchor" aria-hidden="true" href="#the-project-goal">#</a></h2>
-<p>The goal of this project is to explore a pixel readout approach that brings together the useful motion-capture behavior of a global shutter and the practical advantages of a rolling shutter, while avoiding their usual drawbacks as much as possible. The challenge is to balance these competing needs in a pixel architecture.</p>
-<p>Because of the NDA, I am keeping this page focused on the motivation rather than the implementation. The diagrams help explain the problem the project is trying to address, without going into the protected design details.</p>
+<p>The name <strong>4T</strong> means the pixel has four transistors:</p>
+<ul>
+<li><strong>TX (transfer gate):</strong> Opens the path from the photodiode to the floating diffusion (FD).</li>
+<li><strong>RESET:</strong> Clears the FD before a new measurement.</li>
+<li><strong>Source follower:</strong> Buffers the FD voltage so it can be read without disturbing the FD.</li>
+<li><strong>SELECT:</strong> Connects the pixel signal to the column so it can be read.</li>
+</ul>
+<p>During exposure, the photodiode collects charge from light. When TX turns on, that charge moves to the FD and changes its voltage. The source follower buffers this voltage, and SELECT connects it to the column. In this example, the sensor reads the rows one at a time, so it is a rolling-shutter pixel.</p>
+<h3 id="global-shutter-pixel">Global-shutter pixel<a hidden class="anchor" aria-hidden="true" href="#global-shutter-pixel">#</a></h3>
+<p><img alt="Global-shutter pixel readout diagram showing a photodiode, floating diffusion, and storage elements." loading="lazy" src="/images/globalshutter.jpg"></p>
+<p>The global-shutter pixel has the same photodiode, TX, FD, and RESET, but it also has extra transistors and capacitors:</p>
+<ul>
+<li><strong>TX:</strong> Moves charge from the photodiode to the FD when the pixel is captured.</li>
+<li><strong>RST (reset):</strong> Resets the FD before the next capture.</li>
+<li><strong>SF1:</strong> Buffers the FD voltage so it can be sampled.</li>
+<li><strong>PC:</strong> Turns on the path that lets SF1 drive the sampling circuit.</li>
+<li><strong>S1 and S2:</strong> Switch the signal onto capacitors <strong>C1</strong> and <strong>C2</strong>.</li>
+<li><strong>SF2:</strong> Buffers the stored voltage for readout.</li>
+<li><strong>RS:</strong> Connects the pixel output to the column.</li>
+</ul>
+<p>The photodiode stores the light signal as charge (the <strong>charge domain</strong>). At the end of exposure, all pixels transfer their charge to the FD at the same time, where it becomes a voltage. S1 and S2 save voltage samples on C1 and C2. This is <strong>voltage-domain storage</strong>: the capacitors hold voltage, not the original photodiode charge. The camera can then read the stored voltages row by row, after the whole image has been captured.</p>
 
 
   </div>

@@ -1,1 +1,40 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tags on Vassily Lombard — Science &amp; Curiosity</title><link>https://vassily60.github.io/tags/</link><description>Recent content in Tags on Vassily Lombard — Science &amp; Curiosity</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 20 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://vassily60.github.io/tags/index.xml" rel="self" type="application/rss+xml"/><item><title>introduction</title><link>https://vassily60.github.io/tags/introduction/</link><pubDate>Wed, 20 May 2026 00:00:00 +0000</pubDate><guid>https://vassily60.github.io/tags/introduction/</guid><description/></item><item><title>meta</title><link>https://vassily60.github.io/tags/meta/</link><pubDate>Wed, 20 May 2026 00:00:00 +0000</pubDate><guid>https://vassily60.github.io/tags/meta/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tags on Vassily Lombard</title>
+    <link>https://vassily60.github.io/tags/</link>
+    <description>Recent content in Tags on Vassily Lombard</description>
+    <generator>Hugo -- 0.154.2</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 21 May 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://vassily60.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Analog</title>
+      <link>https://vassily60.github.io/tags/analog/</link>
+      <pubDate>Thu, 21 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://vassily60.github.io/tags/analog/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Communication</title>
+      <link>https://vassily60.github.io/tags/communication/</link>
+      <pubDate>Thu, 21 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://vassily60.github.io/tags/communication/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Digital</title>
+      <link>https://vassily60.github.io/tags/digital/</link>
+      <pubDate>Thu, 21 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://vassily60.github.io/tags/digital/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Technology</title>
+      <link>https://vassily60.github.io/tags/technology/</link>
+      <pubDate>Thu, 21 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://vassily60.github.io/tags/technology/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
