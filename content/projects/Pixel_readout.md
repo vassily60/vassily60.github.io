@@ -54,3 +54,13 @@ The global-shutter pixel has the same photodiode, TX, FD, and RESET, but it also
 - **RS:** Connects the pixel output to the column.
 
 The photodiode stores the light signal as charge (the **charge domain**). At the end of exposure, all pixels transfer their charge to the FD at the same time, where it becomes a voltage. S1 and S2 save voltage samples on C1 and C2. This is **voltage-domain storage**: the capacitors hold voltage, not the original photodiode charge. The camera can then read the stored voltages row by row, after the whole image has been captured.
+
+## My role
+
+Now that you know what the difference is between the two pixels, my work was on the readout architecture of pixel rolling shutter trying to achieve a global shutter behavior. There is all kind of tricks to achieve that making the architecture pretty hard to understand but it was super formative.
+
+I unfortunately can't share more information about the design, but my role coonsisted of running the simulations of all the sub-blocks on the chips (from the ADC, to the pixel timing, etc.) and then doing all this on silicon. I had the occasion to go in the cleanroom to work with the material needed to test the chip and characterize it. After a lot of troubleshooting... I finally got the first images from the dark!
+
+With these result, the innovate aspect of the architecture was confirmed and it was a big victory as none knew if it was going to work. From these result I was then able to refine and optimize the architecture and start the documentation and proposal for the next chip generation.
+
+What a great experience, I'm super thankful to STMicroelectronics for giving me the opportunity to work on this project and learn so much about mixed signal IC design!
