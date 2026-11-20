@@ -17,8 +17,6 @@ This past summer I worked at STMicroelectronics on pixel design and characteriza
 My research interests range from VLSI low-power design to sensor and mixed-signal circuit design. I have always loved playing with robots, sensors, and all kinds of connected objects, but what fascinates me is the chips inside!
 Feel free to reach out if you have any questions: vtl2110t[at]columbia[dot]edu.
 
-Important: No AI was used to write this content
-
 ## Courses
 
 ### Fall 2026
@@ -52,4 +50,4 @@ Important: No AI was used to write this content
 ## Useful links
 
 ▶️ [LinkedIn](https://www.linkedin.com/in/vassilylombard/) 🐙 [GitHub](https://github.com/vassily60)
-📄 [Resume](/papers/Vassily_Lombard_Resume_0924.pdf)
+📄 [Resume](/papers/Vassily_Lombard_Resume_1911.pdf) 🏫 [Columbia University](https://www.columbia.edu/)

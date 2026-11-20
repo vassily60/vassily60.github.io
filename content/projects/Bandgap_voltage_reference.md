@@ -2,6 +2,10 @@
 title: "CMOS Bandgap Voltage Reference"
 description: "Designing and characterizing a temperature stable 1.2 V reference."
 weight: 20
+draft: true
+build:
+  list: never
+  render: never
 cover:
   image: "/images/bandgaap.webp"
   caption: "Simple Bandgap Circuit Diagram"
