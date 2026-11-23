@@ -17,6 +17,20 @@ This past summer I worked at STMicroelectronics on pixel design and characteriza
 My research interests range from VLSI low-power design to sensor and mixed-signal circuit design. I have always loved playing with robots, sensors, and all kinds of connected objects, but what fascinates me is the chips inside!
 Feel free to reach out if you have any questions: vtl2110t[at]columbia[dot]edu.
 
+## Awards and Recognitions
+
+- Richard and Janet Hunter Scholar, Columbia University, 2025 & 2026 (outstanding academic achievement)
+- Dean’s List, Columbia University, Fall 2025, Spring 2026
+- William Roha Mathematics Award, Earlham College, 2025 (outstanding work in mathematics)
+- Cobalt Golf All-America Scholars, 2023/2024 & 2024/2025
+
+## Activities
+
+- VP of Sustainability Hall Council, Columbia University, 2026
+- Board Member, French Society, Columbia University, 2026
+- Teaching Assistant, Calculus II, Earlham College, 2023/2024
+- Tutor, Calculus III and Linear Algebra, Earlham College, 2024/2025
+
 ## Courses
 
 ### Fall 2026
