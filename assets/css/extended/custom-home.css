@@ -930,3 +930,141 @@ a:focus-visible {
     left: 1rem;
   }
 }
+
+.papers-page {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.papers-section {
+  margin: 0 0 4rem;
+}
+
+.papers-section-header {
+  margin-bottom: 1.5rem;
+}
+
+.papers-section-header h2 {
+  margin: 0 0 0.6rem;
+  color: var(--site-accent);
+}
+
+.papers-section-header > p:last-child {
+  color: var(--secondary);
+  line-height: 1.7;
+}
+
+.papers-kicker,
+.citation-type {
+  margin: 0 0 0.45rem;
+  color: var(--site-teal);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.citation-list {
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--border);
+}
+
+.citation-item {
+  display: grid;
+  grid-template-columns: 2rem minmax(0, 1fr);
+  gap: 1rem;
+  padding: 1.35rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.citation-index {
+  color: var(--secondary);
+  font-size: 0.85rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.citation-content h3,
+.poster-caption h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+.citation-content > p:not(.citation-type),
+.poster-caption > p:not(.citation-type) {
+  margin: 0.35rem 0;
+  color: var(--secondary);
+  line-height: 1.6;
+}
+
+.citation-content .citation-details {
+  margin-top: 0;
+}
+
+.citation-content cite {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.citation-content strong,
+.poster-caption strong {
+  color: var(--primary);
+}
+
+.citation-link {
+  display: inline-flex;
+  gap: 0.4rem;
+  margin-top: 0.45rem;
+  color: var(--site-accent);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.citation-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.poster-card {
+  display: block;
+  margin: 0;
+  padding: 1.75rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.poster-image-link {
+  display: grid;
+  place-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.poster-image-link img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  max-height: min(70vh, 700px);
+  object-fit: contain;
+}
+
+.poster-caption {
+  padding: 0;
+}
+
+.poster-caption h3 {
+  color: var(--primary);
+}
+
+.poster-description {
+  max-width: 72ch;
+}
+
+@media screen and (max-width: 650px) {
+  .citation-item {
+    grid-template-columns: 1.5rem minmax(0, 1fr);
+    gap: 0.7rem;
+  }
+}

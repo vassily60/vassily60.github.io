@@ -15,7 +15,7 @@ Hi, I'm Vassily, a rising senior at Columbia University studying Computer Engine
 This past summer I worked at STMicroelectronics on pixel design and characterization for optical sensors. I previously worked at a startup in Paris on LLMs architecture design and also in a biomedical lab at Columbia University on a project involving ultrasound localization microscopy (ULM).
 
 My research interests range from VLSI low-power design to sensor and mixed-signal circuit design. I have always loved playing with robots, sensors, and all kinds of connected objects, but what fascinates me is the chips inside!
-Feel free to reach out if you have any questions: vtl2110t[at]columbia[dot]edu.
+Feel free to reach out if you have any questions: vtl2110[at]columbia[dot]edu.
 
 ## Awards and Recognitions
 

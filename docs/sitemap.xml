@@ -8,8 +8,6 @@
   </url><url>
     <loc>https://vassily60.github.io/projects/fsmprocessor/</loc>
   </url><url>
-    <loc>https://vassily60.github.io/projects/bandgap_voltage_reference/</loc>
-  </url><url>
     <loc>https://vassily60.github.io/projects/digital_electronics_piano/</loc>
   </url><url>
     <loc>https://vassily60.github.io/projects/drone_imaging/</loc>
@@ -60,5 +58,7 @@
     <loc>https://vassily60.github.io/readings/spqr/</loc>
   </url><url>
     <loc>https://vassily60.github.io/readings/lerougeetnoir/</loc>
+  </url><url>
+    <loc>https://vassily60.github.io/papers/</loc>
   </url>
 </urlset>

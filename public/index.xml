@@ -220,5 +220,12 @@
       <guid>http://localhost:1313/readings/lerougeetnoir/</guid>
       <description>Stendhal&amp;#39;s novel about social ambition in the post Napoleonic era</description>
     </item>
+    <item>
+      <title>Unpublished Papers and Posters</title>
+      <link>http://localhost:1313/papers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/papers/</guid>
+      <description>I listed below a few unpublished papers I worked on. They act as a proof of my research skills and my ability to work on a project from start to finish. I also included a few posters I presented at conferences.</description>
+    </item>
   </channel>
 </rss>
