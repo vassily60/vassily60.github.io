@@ -92,7 +92,7 @@ title: "Experiences"
       </div>
       <details class="experience-card" open>
         <summary>
-          <span class="experience-period">Aug. 2023 - May 2025</span>
+          <span class="experience-period">Aug. 2023 - May 2024</span>
           <span class="experience-role">Calculus II Teaching Assistant @ Earlham College</span>
           <span class="experience-toggle" aria-hidden="true">+</span>
         </summary>
